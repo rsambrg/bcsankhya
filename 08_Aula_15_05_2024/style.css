@@ -17,7 +17,7 @@ h2{
     margin-bottom: 10px;
     font-weight:normal;
 }
-main, .sidebar {
+main {
     flex: 1;
     display: flex;
     flex-wrap:wrap;
