@@ -1,0 +1,40 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/dff62dca-7f55-4098-ae45-57034374d2e0/dfdcu80-c66af57f-c4a3-4011-983e-813bfbd5e333.png/v1/fill/w_1280,h_854,q_80,strp/emo_wallpaper_by_zeffdakilla_dfdcu80-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODU0IiwicGF0aCI6IlwvZlwvZGZmNjJkY2EtN2Y1NS00MDk4LWFlNDUtNTcwMzQzNzRkMmUwXC9kZmRjdTgwLWM2NmFmNTdmLWM0YTMtNDAxMS05ODNlLTgxM2JmYmQ1ZTMzMy5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19._PRR7t2Z-yayGdXkQR7XZQMLR1Wy13czAYulLwm8DYo);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.class1 {
+    margin: 40px auto;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 0, 123, 0.233);
+    box-shadow: 2px 5px 10px rgba(9, 7, 82, 0.507);
+    width: auto;
+    height: auto;
+    border-radius: 200px;
+}
+
+#class2 {
+    margin: 40px auto;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.438);
+    border-radius: 200px;
+    padding: 100px;
+    width: 200px fit-content;
+    height: 200px fit-content;
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+    box-shadow: 0px 0px 13px rgb(255, 255, 255);
+    box-shadow: 0px 0px 15px rgb(254, 254, 254);
+    box-shadow: 0px 0px 17px rgb(255, 255, 255);
+    box-shadow: 0px 0px 20px rgb(9, 7, 82, 0.507);
+    box-shadow: 0px 0px 22px rgb(9, 7, 82, 0.507);
+}
