@@ -1,0 +1,270 @@
+
+:root{
+    --color-background:#ffffff;
+    --color-black:#000000;
+    --color-yellow: #fffb00;
+    --color-green: #0dff00;
+    --color-red: #ff0000; 
+    --color-blue: #00eaff;
+    --color-light-blue: #00f7ff;
+    --color-box-shadow: rgb(242, 0, 255);
+}
+
+body {
+    font-family:"Comic Sans MS", "Comic Sans", cursive;
+    font-size: 20px;
+    background-color:var(--color-background);
+    color: black;
+}
+
+/* Corpo Principal */
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color:var(--color-red);
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #498ACC;
+    border-style: inset;
+    border-width: 1px;
+    border-color: rgba(218, 165, 32, 0.3);
+    box-shadow: 0px 0px 30px var(--color-red);
+}
+.container {
+    width:fit-content;
+    margin: 0 auto;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+    height: auto; 
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 20px;
+    width: 90%;
+    background-color:var(--color-green);
+    border-style: inset;
+    border-radius: 6px;
+    border-color: var(--color-yellow);
+    border-width: 1px;
+}
+
+#novidades {
+    margin: 0 auto;
+    padding: 20px;
+    width: fit-content;
+    background-color:var(--color-green);
+    border-style:inset;
+    border-color:var(--color-yellow);
+    border-width: 1px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+footer{
+    background-color:#498ACC;
+}
+
+
+/* Landings*/
+
+#contato {
+    background-color: var(--color-light-blue);
+    flex-wrap: wrap;
+    width: 200px;
+    height: auto;
+    input, textarea {
+        background-color:#284861;
+    }
+}
+
+#login {
+    display: flex;
+    flex-direction: column 20px;
+    padding: auto;
+    border-radius: 15px;
+    background-color:rgb(215, 215, 62);
+    box-shadow: 0px 0px 15px var(--color-red);
+    color: #27310F;
+}
+
+.cursos {
+    display: flex;
+    padding-left: 0;
+}
+
+#portal_al{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin: 0 auto;
+    border-radius: 15px;
+    justify-content:flex-start;
+    
+    #dadosaluno { 
+        background-color:#498bcc;
+        color: white;
+        padding: 10px;
+        border-style: outset;
+        border-color: var(--color-yellow);
+    }
+}
+
+
+/* Fotos */
+#foto >img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit:cover; 
+}
+
+img {
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit:cover; 
+    border-style: inset;
+    border-radius: 6px;
+    border-color: var(--color-yellow);
+    border-width: 1px;
+}
+
+
+/* Botões,letras, listas e links*/
+
+a {
+    text-decoration: none;
+    color:white;
+}
+
+.butt2{
+    background-color: var(--color-red);
+    border-radius: 10px;
+    padding: 2px;
+    width: fit-content;
+    font-size: 16px;
+    border-style: outset;
+    border-width: 2px;
+    border-color: var(--color-yellow);
+    a{
+       color: var(--color-yellow); 
+       padding: 3px;
+    }
+    
+}
+
+h1, h2{
+    font-family: 'Metal Mania';
+    color:var(--color-yellow);
+    text-shadow: 0px 0px 10px rgba(17, 219, 255, 0);
+    text-shadow: 0px 0px 15px var(--color-yellow);
+    text-shadow: 0px 0px 22px var(--color-yellow);
+    text-shadow: 0px 0px 30px var(--color-yellow);
+}
+
+#novidades > ul {
+    color: white;
+    background-color:#498bcc;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column 1fr 1fr ;
+    list-style-type: none;
+    li {
+        padding-left: 10px;
+    }
+}
+
+ol {
+    list-style: none;
+}
+
+input {
+    display: flex; 
+    flex-wrap: wrap;
+    width: 200px;
+}
+
+
+button {
+    font-size: 16px;
+    cursor: pointer;
+    border-style: inset;
+    border-color: goldenrod;
+    border-width: 1px;
+    border-radius: 15px;
+    background-color: var(--color-green);
+    color:goldenrod;
+}
+
+#foto >button {
+    border-style: none;
+    margin: 0 auto;
+    border-radius: 15px;
+    background-color: yellow;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+    color:var(--color-black);
+    box-shadow: 0px 0px 5px var(--color-red);
+}
+
+input, textarea, select{
+    background-color: var(--color-yellow);
+    border-style: inset;
+    border-width: 1px;
+    border-color: goldenrod;
+    color: white;
+}
+
+
+/* Animações, Hovers e transições*/
+
+#novidades{
+    box-shadow: 0px 0px 30px var(--color-red);
+    transition-duration: 1000ms;
+}
+#novidades >ul{
+    box-shadow: 0px 0px 25px var(--color-red);
+    transition-duration: 1000ms;
+}
+
+.box {
+    cursor: pointer;
+    box-shadow: 0px 0px 20px var(--color-red);
+    transition-duration: 1000ms;
+}
+
+#foto >img{
+    cursor: pointer;
+    box-shadow: 0px 0px 20px var(--color-red);
+    transition-duration: 500ms;
+}
+
+.navbar > a {
+    color: goldenrod;
+    transition-duration: 1000ms;
+    text-shadow: 0px 0px 3px var(--color-red);
+
+}
+
+

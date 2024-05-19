@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscreva-se!</title>
+    <link href='https://fonts.googleapis.com/css?family=Metal Mania' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div id="tema1">
+                <link rel="stylesheet" href="style1.css">
+                <button type="button"onclick="mudarTema()">Mudar tema</button>
+                </div>
+            <a href="atividade_05.html">Inicio</a>
+            <a href="#" onclick="loginBox()">Login</a>
+            <a href="portal.html">Portal do Aluno</a>
+            <a href="cursos.html">Cursos</a>
+            <a href="#">Inscrição</a style="padding:10px";>
+            <a href="sobre.html">Sobre</a>
+            <a href="contato.html">Contato</a>  
+        </nav>
+    </header>
+    <div class="container">
+            <section>
+                <h2>Inscrição</h2>
+            </section>
+                <div id="login" style="width: fit-content;flex-wrap: wrap;">
+                </div>
+        <main>
+                <div class="box" >
+                        <div class="box" style="width: fit-content; background-color:#6D2F16;">
+                         <p style="width: 200px;">
+                            Infelizmente nós da TECTEC temos salas limitadas e exclusivas!
+                            Preencha seus dados e em breve quando houver uma vaga entraremos em contato!
+                        </p>   
+                        </div>
+                        <form>
+                            <form id="myForm" onsubmit="return confirm('Deseja enviar formulário?');">
+                                    <ol>
+                                        <li>Nome:</li>
+                                        <li><input type="text" id="nome" name="nome" required maxlength="35"></li>
+                                        <li>Data de Nascimento</li>
+                                        <li><input type="date" id="data_nasc" name="data_nasc" minlength="8"></li>
+                                        <li>Genero</li>
+                                        <li><input type="radio" name="sexo" id="sexo"
+                                        value="Masculino" style="width:10px;"><label>Masculino</label>
+                                        <input type="radio" name="sexo" id="sexo"
+                                        value="Feminino" style="width:10px;"><label>Feminino</label><br></li>
+                                        <li>Endereço</li>
+                                        <li><input type="text" id="endereço" name="endereço"></li>
+                                        <li>E-mail</li>
+                                        <li><input type="email" id="email" name="email" required maxlength="35"></li>
+                                        <li>Telefone</li>
+                                        <li><input type="number" id="telefone" name="telefone" pattern="[0-9]{9}"></li>
+                                        <li>Curso</li>
+                                        <li>
+                                            <select style="display: flex; flex-wrap: wrap;width: 100px;">Curso 
+                                                <option>--Curso---</option>
+                                                <option>Jogos C# - Curso completo 0 a Avançado </option>
+                                                <option>UX UI Jogos - INICIANTE</option>
+                                                <option>Fisica de Jogos</option>
+                                            </select>
+                                        </li>
+                                        <li>Período</li>
+                                        <li>
+                                            <select>
+                                                <option>Manhã</option>
+                                                <option>Tarde</option>
+                                                <option>Noite</option>
+                                            </select>
+                                        </li>
+                                        <li>Observações</li>
+                                        <li>
+                                            <textarea name="Observações" placeholder="Digite sua observação"></textarea>
+                                        </li>
+                                    </ol>
+                                        <button style="background-color: goldenrod;color:#27310F;" type="submit">Enviar</button>
+                                </form>
+                                <dialog id="confirmationDialog">
+                                    <p>Informações enviadas com sucesso!</p>
+                                    <button onclick="document.getElementById('confirmationDialog').close()">Fechar</button>
+                                </dialog>
+                                
+                                    <script>
+                                    var form = document.getElementById('myForm');
+                                    form.addEventListener('submit', function() {
+                                      var dialog = document.getElementById('confirmationDialog');
+                                      dialog.showModal();
+                                      setTimeout(function() {
+                                    dialog.close();
+                                    }, 10000); 
+                                    event.preventDefault(); 
+                                    });
+                                    function closeDialog() {
+                                    document.getElementById('confirmationDialog').close();
+                                    }
+                                    </script>
+                    </form>
+                </div>
+        </main>
+    <script src="script.js" defer></script>
+    </div>
+    <footer>
+        &copy;2024 R. Sambrg
+    </footer>
+</body>
+</html>
