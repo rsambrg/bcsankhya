@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trocar Conteúdo</title>
+</head>
+<body>
+
+    <!-- Navegação -->
+    <nav>
+        <a href="#" class="nav-link botaojogo" id="botaojogo">Jogos</a>
+    </nav>
+
+    <!-- Conteúdo Atual -->
+    <div id="carregarJogos">
+        <p>Bem-vindo! Clique em "Jogos" para ver o conteúdo dos jogos.</p>
+    </div>
+
+    <!-- Conteúdo Jogos (escondido) -->
+    <div id="jogos_pagina" style="display: none;">
+        <p>Em manutenção</p>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Espera que o DOM seja totalmente carregado
+        document.addEventListener("DOMContentLoaded", function() {
+            // Adiciona event listener ao botão "Jogos"
+            document.getElementById('botaojogo').addEventListener('click', function(event) {
+                event.preventDefault(); // Cancela o comportamento padrão do link
+                
+                // Pega o conteúdo da div jogos_pagina
+                var novoConteudo = document.getElementById('jogos_pagina').innerHTML;
+                
+                // Insere o novo conteúdo em conteudoAtual
+                document.getElementById('carregarJogos').innerHTML = novoConteudo;
+            });
+        });
+    </script>
+
+</body>
+</html>
