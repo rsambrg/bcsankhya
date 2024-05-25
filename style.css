@@ -1,16 +1,20 @@
 :root {
-    --color-lightpink: #dc7272;
-    --color-pink: #d94343;
-    --color-red: #c90606;
+    --color-011: #dc7272;
+    --color-012: #d94343;
+    --color-013: #c90606;
 
-    --color-creamy-pink: #f4e7e7;
-    --color-creamy: #fffcd6;
-    --color-creamy2: #fffcd66a;
-    --color-creamy3: #f9f6e0ec;
+    --color-021: #a2cc07;
+    --color-022: #53901a;
+    --color-023: #3f6e13;
+    --color-024: #045e2f;
 
-    --color-yellow: #a2cc07;
-    --color-lightgreen: #53901a;
-    --color-green: #045e2f;
+    --color-taskbar1: #fffdd0;
+    --color-taskbar2: #d0cc93;
+
+    --color-031: #f4e7e7;
+    --color-032: #fffcd6;
+    --color-033: #fffcd66a;
+    --color-034: #f9f6e0ec;
 
     --color-gold: #d7a526;
     --color-gold2: #d7a52612;
@@ -25,8 +29,8 @@
 
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: var(--color-lightpink);
-    background-image: linear-gradient(to right, var(--color-lightpink), var(--color-creamy2));
+    background-color: var(--color-011);
+    background-image: linear-gradient(to right, var(--color-011), var(--color-033));
     color: var(--color-font2);
     margin-bottom: 50px;
 }
@@ -34,7 +38,7 @@ body {
 /* Cabeça e corpo */
 
 .container {
-    background-color: var(--color-creamy3);
+    background-color: var(--color-034);
     min-width: 310px;
     border-radius: 10px;
     border-style: outset;
@@ -46,8 +50,8 @@ body {
 }
 
 #navegadorbarra {
-    background-color: var(--color-yellow);
-    background-image: linear-gradient(to bottom, var(--color-yellow), var(--color-lightgreen));
+    background-color: var(--color-021);
+    background-image: linear-gradient(to bottom, var(--color-021), var(--color-022));
     box-shadow: 0px 0px 30px var(--color-shadow);
     border-style: outset;
     border-color: var(--color-gold);
@@ -56,24 +60,24 @@ body {
 
     ul>li>.nav-link {
         padding: 10px;
-        background-color: var(--color-yellow);
+        background-color: var(--color-021);
         border-radius: 10px;
-        background-image: linear-gradient(to bottom, var(--color-yellow), #3f6e13);
+        background-image: linear-gradient(to bottom, var(--color-021), var(--color-023));
         border-style: outset;
         border-width: 1px;
         border-color: var(--color-gold);
-        color: var(--color-creamy);
+        color: var(--color-032);
         box-shadow: 0px 0px 10px #1401245d;
     }
 
     ul>li>.nav-link:hover {
-        background-image: linear-gradient(to bottom, var(--color-yellow), var(--color-lightgreen));
+        background-image: linear-gradient(to bottom, var(--color-021), var(--color-022));
         border-style: inset;
         box-shadow: 0px 0px 5px #14012425;
     }
 
     ul>li>.nav-link:active {
-        background-image: linear-gradient(to bottom, var(--color-yellow), var(--color-lightgreen));
+        background-image: linear-gradient(to bottom, var(--color-021), var(--color-022));
         border-style: inset;
         box-shadow: 0px 0px 5px #14012425;
     }
@@ -99,7 +103,7 @@ body {
 
     li:hover {
         box-shadow: 0px 0px 10px var(--color-shadow);
-        background-color: var(--color-yellow);
+        background-color: var(--color-021);
     }
 
     li {
@@ -109,7 +113,7 @@ body {
 
     a {
 
-        color: var(--color-pink);
+        color: var(--color-012);
         padding: 5px;
 
     }
@@ -119,8 +123,8 @@ footer {
     text-align: center;
     position: fixed;
     height: 50px;
-    background-color: var(--color-pink);
-    color: var(--color-creamy);
+    background-color: var(--color-012);
+    color: var(--color-032);
     bottom: 0px;
     left: 0px;
     right: 0px;
@@ -130,27 +134,27 @@ footer {
 /* Listas e botões */
 
 .btn:hover {
-    background-color: var(--color-lightgreen);
-    background-image: linear-gradient(to bottom, var(--color-pink), var(--color-lightpink));
+    background-color: var(--color-022);
+    background-image: linear-gradient(to bottom, var(--color-012), var(--color-011));
     border-style: inset;
     border-color: var(--color-gold);
-    color: var(--color-creamy);
+    color: var(--color-032);
 }
 
 .btn:active {
-    color: var(--color-creamy);
-    background-color: var(--color-pink);
+    color: var(--color-032);
+    background-color: var(--color-012);
     border-color: var(--color-gold);
     border-style: inset;
     transition-duration: 0.1ms;
 }
 
 .btn {
-    background-color: var(--color-yellow);
-    background-image: linear-gradient(to bottom, var(--color-yellow), var(--color-lightgreen));
+    background-color: var(--color-021);
+    background-image: linear-gradient(to bottom, var(--color-021), var(--color-022));
     border-style: outset;
     border-color: var(--color-gold);
-    color: var(--color-creamy);
+    color: var(--color-032);
     box-shadow: 0px 0px 10px var(--color-shadow);
 
 }
@@ -190,22 +194,22 @@ ul.dropdown-menu {
 .taskbar {
     display: flex;
     justify-content: space-between;
-    background-color: var(--color-green);
-    background-image: linear-gradient(to bottom, #fffdd0, #d0cc93);
+    background-color: var(--color-024);
+    background-image: linear-gradient(to bottom, var(--color-taskbar1), var(--color-taskbar2));
     border-radius: 10px;
     padding: 5px;
     border-bottom: 1px solid #dee2e6;
 }
 
 .taskbar button {
-    color: var(--color-lightpink);
+    color: var(--color-011);
     font-weight: 900;
     background: var(--color-gold2);
-    background-image: radial-gradient(var(--color-creamy3), var(--color-gold3));
+    background-image: radial-gradient(var(--color-034), var(--color-gold3));
     border: outset;
     border-width: 3px;
     border-radius: 5px;
-    border-color: var(--color-creamy);
+    border-color: var(--color-032);
     cursor: pointer;
 }
 
@@ -213,7 +217,7 @@ ul.dropdown-menu {
     border: inset;
     border-width: 3px;
     border-radius: 5px;
-    border-color: var(--color-creamy);
+    border-color: var(--color-032);
     cursor: pointer;
 }
 
