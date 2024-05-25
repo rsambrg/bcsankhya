@@ -1,46 +1,224 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Cabeçalho</h1>
-        </header>
-        <aside>
-            <h2>Lista de Exercicíos</h2>
-            <ul>
-            <h4>HTML</h4>
-                <li><a href="SANKHYA/02_Aula_07_05/exercicios_01.html"> Exercicio 01</a></li>
-                <li><a href="03_Aula_08_05/aula_03_tabela.html">Exercício - Tabela</a></li>
-                <li><a href="03_Aula_08_05/exercicio_02.html"> Exercicio 02 </a></li>
-                <li><a href="04_Aula_09_05/exercicio_geral_html.html">Exercicio Geral</a></li>
-                <li><a href="04_Aula_09_05/exercicio_03.html">Exercicio 03</a></li>
-                <li><a href="https://rsambrg.github.io/trabalho_portifolio_bcsankhya/rebeca/rebeca.html">Exercício 05 (Portifolio)</a></li>
-            </ul>
-            <ul>
-            <h4>CSS</h4>
-                <li><a href="07_Aula_14_05/index.html">Página de noticia</a></li>
-                <li><a href="08_Aula_15_05_2024/index.html">Login do facebook [réplica]</a></li>
-                <li><a href="09_Aula_16_05/Atividade_04.html">Site de fotografia</a></li>
-                <li><a href="10_Aula_17_05/Site da EDTECH/atividade_05.html">Site EDTECH [flexbox]</a></li>
-            </ul>
-            <h4>BOOTSTRAP</h4>
-            <ul>
-                <li><a href="https://rsambrg.github.io/trabalho_produtossankhyaboot">Trabalho em Grupo - Página de produtos</a></li>
-            </ul>
-        </aside>
-        <main>
-            <h2>Seja bem-vindo ao meu perfil!</h2>
-            <p>Aqui você vai encontrar atualizações, notas e observações e também vai poder acompanhar meu progresso durante o Bootcamp da Sankhya!</p>
-        </main>
-        <footer>
-            <p>Rodapé</p>
-        </footer>
+
+<body class="p-3 m-0 border-0 bd-example m-0 border-0">
+    <!--Barra de navegação-->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid" id="navegadorbarra">
+            <a class="navbar-brand" href="#"><span style="padding-right: 30px;cursor: default;"></span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- AS OPÇOES COMEÇAM AQUI -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.linkedin.com/in/eng-rebecasampaio/"><img
+                                src="linkedin.png" width="20px" height="20px"></a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/rsambrg"><img src="git.png"
+                                style="object-fit: contain;width: 20px;height: 20px;"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link botaojogo" id="botaojogo">Jogos</a>
+                    </li>
+                    <!--AQUI COMEÇAM OS DROPDOWN MENU-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Bootcamp
+                        </a>
+                        <div class="botaoselecao">
+                            <ul class="dropdown-menu">
+                                <li><a href="#" class="dropdown-item botaoTrocar">
+                                        Sankhya - SoulCode
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <!--
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        </li> -->
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+
+    </nav>
+    <!--Fim da barra de navegação-->
+    <!--Primeiro Box, onde fica a header e a main-->
+    <div class="box container" id="box1">
+        <div class="taskbar">
+            <button class="close-btn">&times;</button>
+            <button class="expand-btn">&#9633;</button>
+        </div>
+        <div class="content">
+            <div name="meu_conteudo">
+                <!--Header e Main -->
+                <div id="conteudoAtual"class="mt-5">
+                    <header>
+                        <h1>R. Sambrg</h1>
+                        <h3>Meus links, projetos pessoais e estudos</h3>
+                    </header>
+
+                    <main>
+
+                        <h2>Seja bem-vindo ao meu perfil!</h2>
+                        <div class="novidades" style="width: 70vw;max-width: 500px;max-height: auto;padding: 1vw;">
+                            Aqui você vai encontrar atualizações, notas e observações e também vai poder acompanhar meu
+                            progresso!
+
+                            Atualmente participando de um Bootcamp!
+                        </div>
+
+                        <a href="#" class="dropdown-item botaoTrocar">
+                            <button type="button" class="btn btn">Bootcamp da Soulcode + Sankhya</button>
+                        </a>
+                        <!--
+                        <button type="button" class="btn btn-primary mb-2" id="openBox3">Open Box 3</button>
+                        -->
+                        </p>
+                    </main>
+                </div>
+            </div>
+        </div>
     </div>
+    <!--Fim do primeiro box-->
+    <!--Box das listas de exercicios-->
+    <div class="box container" id="box2" name="lista_sankhya">
+        <div class="taskbar">
+            <button class="close-btn">&times;</button>
+            <button class="expand-btn">&#9633;</button>
+        </div>
+        <div class="content">
+            <!--lista de exercicios do bootcamp-->
+            <div id="boot_sankhya">
+                <h2>Lista de Exercicíos</h2>
+                <div>
+                    <!-- Botões para alternar entre as listas -->
+                    <button type="button" class="btn btn mb-2 botaoTrocar" data-target="lista1">HTML</button>
+                    <button type="button" class="btn btn mb-2 botaoTrocar" data-target="lista2">CSS</button>
+                    <button type="button" class="btn btn mb-2 botaoTrocar" data-target="lista3">Bootstrap</button>
+                    <button type="button" class="btn btn mb-2 botaoTrocar" data-target="lista4">JavaScript</button>
+                    <button type="button" class="btn btn mb-2 botaoTrocar" data-target="lista5">Banco de Dados</button>
+                    <button type="button" class="btn btn mb-2 botaoTrocar" data-target="lista6">Java</button>
+
+                    <!-- Divs de conteúdo -->
+                    <div id="empty" class="mt-3">
+                        <p> </p>
+                    </div>
+
+                    <div class="listaConteudo" nome="lista_html" id="lista1" style="display: none;" class="mt-3">
+                        <ul>
+                            <li><a href="SANKHYA/02_Aula_07_05/exercicios_01.html">Exercicio 01</a></li>
+                            <li><a href="03_Aula_08_05/aula_03_tabela.html">Exercício - Tabela</a></li>
+                            <li><a href="03_Aula_08_05/exercicio_02.html">Exercicio 02</a></li>
+                            <li><a href="04_Aula_09_05/exercicio_geral_html.html">Exercicio Geral</a></li>
+                            <li><a href="04_Aula_09_05/exercicio_03.html">Exercicio 03</a></li>
+                            <li><a href="https://rsambrg.github.io/trabalho_portifolio_bcsankhya/rebeca/rebeca.html">Exercício
+                                    05 (Portifolio)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="listaConteudo" nome="lista_css" id="lista2" style="display: none;" class="mt-3">
+                        <ul>
+                            <li><a href="07_Aula_14_05/index.html">Página de noticia</a></li>
+                            <li><a href="08_Aula_15_05_2024/index.html">Login do facebook [réplica]</a></li>
+                            <li><a href="09_Aula_16_05/Atividade_04.html">Site de fotografia</a></li>
+                            <li><a href="10_Aula_17_05/Site da EDTECH/atividade_05.html">Site EDTECH
+                                    [flexbox]</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="listaConteudo" nome="lista_bootstrap" id="lista3" style="display: none;" class="mt-3">
+                        <ul>
+                            <li><a href="https://rsambrg.github.io/trabalho_produtossankhyaboot/">Trabalho em grupo -
+                                    Página de produtos</a></li>
+                            <li><a href="#">-</a></li>
+                            <li><a href="#">-</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="listaConteudo" nome="lista_javascript" id="lista4" style="display: none;" class="mt-3">
+                        <ul>
+                            <li><a href="#">-</a></li>
+                            <li><a href="#">-</a></li>
+                            <li><a href="#">-</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="listaConteudo" nome="lista_bd" id="lista5" style="display: none;" class="mt-3">
+                        <ul>
+                            <li><a href="#">-</a></li>
+                            <li><a href="#">-</a></li>
+                            <li><a href="#">-</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="listaConteudo" nome="lista_java" id="lista6" style="display: none;" class="mt-3">
+                        <ul>
+                            <li><a href="#">-</a></li>
+                            <li><a href="#">-</a></li>
+                            <li><a href="#">-</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="teste" class="mt-3">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fim do segundo box-->
+    <!--Box dos Jogos-->
+    <div class="box container" id="box3" name="lista_jogos">
+        <div class="taskbar">
+            <button class="close-btn">&times;</button>
+            <button class="expand-btn">&#9633;</button>
+        </div>
+        <div class="content">
+            <div id="jogos_pagina" style="display: none;">
+                <h1 style="color:green;">EM MANUTENÇÃO!</h1>
+                <h3>Jogos</h3>
+                <a href="https://rsambrg.github.io/jogos/jogo%20do%20aviao/flappy.html" style="font-weight: bold;color: lightseagreen;">Jogo do Avião</a>
+            </div>
+        </div>
+    </div>
+    <!--Fim do terceiro box-->
+    </div>
+    <script src="script.js" defer></script>
+
 </body>
+<footer class="fixed bottom">
+    <p>&copy; 2024 HTML
+        R. Sambrg</p>
+</footer>
+
 </html>
