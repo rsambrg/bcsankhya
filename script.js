@@ -43,14 +43,12 @@ function addTaskbarToLists() {
             div.style.display = 'none';
         });
 
-        expandButton.addEventListener('click', function () {
-            var content = div.querySelector('.content');
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-                content.style.width = ''; // Remover a largura personalizada
+         // Adiciona event listener ao botão de expandir/recolher
+         expandButton.addEventListener('click', function() {
+            if (div.style.width === '10vw') {
+                div.style.width = '70vw'; 
             } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-                content.style.width = '70vw'; // Definir a largura como 70% da tela
+                div.style.width = '10vw';
             }
         });
     });
@@ -108,7 +106,7 @@ document.querySelectorAll('.expand-btn').forEach(function (button) {
     button.addEventListener('click', function () {
         var box = this.closest('.box');
         if (box.style.width === '100%') {
-            box.style.width = '0%';
+            box.style.width = '350px';
         } else {
             box.style.width = '100%';
         }
