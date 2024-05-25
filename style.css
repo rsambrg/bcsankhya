@@ -1,71 +1,83 @@
 :root {
     --color-lightpink: #dc7272;
-    --color-pink:#d94343;
+    --color-pink: #d94343;
     --color-red: #c90606;
-    --color-creamy: #fffcd6;
+
     --color-creamy-pink: #f4e7e7;
+    --color-creamy: #fffcd6;
+    --color-creamy2: #fffcd66a;
+    --color-creamy3: #f9f6e0ec;
+
     --color-yellow: #a2cc07;
-    --color-lightgreen: #53901a;   
+    --color-lightgreen: #53901a;
     --color-green: #045e2f;
+
     --color-gold: #d7a526;
+    --color-gold2: #d7a52612;
+    --color-gold3: #d7a5264a;
 
     --color-font1: #022916;
     --color-font2: #2f0404;
 
     --color-shadow: #14012443;
+
 }
 
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #dc7272;
-    background-image: linear-gradient(to right,#dc7272,#fffcd66a);
+    background-color: var(--color-lightpink);
+    background-image: linear-gradient(to right, var(--color-lightpink), var(--color-creamy2));
     color: var(--color-font2);
-    margin-bottom:50px;
+    margin-bottom: 50px;
 }
 
 /* Cabeça e corpo */
 
 .container {
-    background-color: #f9f6e0ec;
+    background-color: var(--color-creamy3);
     min-width: 310px;
     border-radius: 10px;
     border-style: outset;
     border-width: 2px;
-    border-color: goldenrod;
+    border-color: var(--color-gold);
     box-shadow: 0px 0px 30px var(--color-shadow);
     padding: 0;
-    
+
 }
 
 #navegadorbarra {
     background-color: var(--color-yellow);
-    background-image: linear-gradient(to bottom,var(--color-yellow),var(--color-lightgreen));
+    background-image: linear-gradient(to bottom, var(--color-yellow), var(--color-lightgreen));
     box-shadow: 0px 0px 30px var(--color-shadow);
     border-style: outset;
     border-color: var(--color-gold);
     border-width: 2px;
     border-radius: 7px;
+
     ul>li>.nav-link {
         padding: 10px;
         background-color: var(--color-yellow);
         border-radius: 10px;
-        background-image: linear-gradient(to bottom,var(--color-yellow),#3f6e13);
+        background-image: linear-gradient(to bottom, var(--color-yellow), #3f6e13);
         border-style: outset;
         border-width: 1px;
         border-color: var(--color-gold);
         color: var(--color-creamy);
-        box-shadow: 0px 0px 10px #1401245d;     
+        box-shadow: 0px 0px 10px #1401245d;
     }
-    ul>li>.nav-link:hover{
-        background-image: linear-gradient(to bottom,var(--color-yellow),var(--color-lightgreen));
+
+    ul>li>.nav-link:hover {
+        background-image: linear-gradient(to bottom, var(--color-yellow), var(--color-lightgreen));
         border-style: inset;
-        box-shadow: 0px 0px 5px #14012425;  
+        box-shadow: 0px 0px 5px #14012425;
     }
-    ul>li>.nav-link:active{
-        background-image: linear-gradient(to bottom,var(--color-yellow),var(--color-lightgreen));
+
+    ul>li>.nav-link:active {
+        background-image: linear-gradient(to bottom, var(--color-yellow), var(--color-lightgreen));
         border-style: inset;
-        box-shadow: 0px 0px 5px #14012425;  
+        box-shadow: 0px 0px 5px #14012425;
     }
+
     li {
         padding-left: 5px;
         padding: 2px;
@@ -74,7 +86,7 @@ body {
 
 .listaConteudo {
     background-color: white;
-    background-image: radial-gradient(white,#d7a52612);
+    background-image: radial-gradient(white, var(--color-gold2));
     max-width: 600px;
     width: 50vw;
     min-width: 280px;
@@ -89,13 +101,14 @@ body {
         box-shadow: 0px 0px 10px var(--color-shadow);
         background-color: var(--color-yellow);
     }
+
     li {
-        
+
         padding: 8px;
     }
-    
+
     a {
-        
+
         color: var(--color-pink);
         padding: 5px;
 
@@ -113,17 +126,18 @@ footer {
     right: 0px;
     margin-bottom: 0px;
 }
+
 /* Listas e botões */
 
-.btn:hover{
+.btn:hover {
     background-color: var(--color-lightgreen);
-    background-image: linear-gradient(to bottom,var(--color-pink),var(--color-lightpink));
+    background-image: linear-gradient(to bottom, var(--color-pink), var(--color-lightpink));
     border-style: inset;
     border-color: var(--color-gold);
     color: var(--color-creamy);
 }
 
-.btn:active{
+.btn:active {
     color: var(--color-creamy);
     background-color: var(--color-pink);
     border-color: var(--color-gold);
@@ -133,22 +147,24 @@ footer {
 
 .btn {
     background-color: var(--color-yellow);
-    background-image: linear-gradient(to bottom,var(--color-yellow),var(--color-lightgreen));
+    background-image: linear-gradient(to bottom, var(--color-yellow), var(--color-lightgreen));
     border-style: outset;
     border-color: var(--color-gold);
     color: var(--color-creamy);
     box-shadow: 0px 0px 10px var(--color-shadow);
-    
+
 }
 
 .botaoselecao {
     a {
         text-decoration: none;
     }
+
     button {
         color: var(--color-font2);
     }
-    a:active{
+
+    a:active {
         background-color: Transparent;
         color: var(--color-font2);
     }
@@ -162,6 +178,7 @@ a {
 li {
     list-style: none;
 }
+
 ul.dropdown-menu {
     position: static;
     float: none;
@@ -174,38 +191,44 @@ ul.dropdown-menu {
     display: flex;
     justify-content: space-between;
     background-color: var(--color-green);
-    background-image: linear-gradient(to bottom,#fffdd0,#d0cc93);
+    background-image: linear-gradient(to bottom, #fffdd0, #d0cc93);
     border-radius: 10px;
     padding: 5px;
     border-bottom: 1px solid #dee2e6;
 }
+
 .taskbar button {
     color: var(--color-lightpink);
     font-weight: 900;
-    background: #d7a52625;
-    background-image: radial-gradient(#fffcd6f8,#d7a5264a);
-    border:outset;
+    background: var(--color-gold2);
+    background-image: radial-gradient(var(--color-creamy3), var(--color-gold3));
+    border: outset;
     border-width: 3px;
     border-radius: 5px;
     border-color: var(--color-creamy);
     cursor: pointer;
 }
+
 .taskbar button:hover {
-    border:inset;
+    border: inset;
     border-width: 3px;
     border-radius: 5px;
     border-color: var(--color-creamy);
     cursor: pointer;
 }
+
 .taskbar button:focus {
     outline: none;
     box-shadow: none;
 }
+
 .box {
     margin-bottom: 10px;
     position: relative;
-    display: none; /* Initially hide all boxes */
+    display: none;
+    /* Initially hide all boxes */
 }
+
 .content {
     padding: 15px;
 }
