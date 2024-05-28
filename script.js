@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const tema = document.getElementById('tema');
 
     // Armazenar o conteúdo da página inicial em uma variável
-    const paginaInicioConteudo = document.getElementById('pagina_inicio').innerHTML;
+    const paginaInicioConteudo = document.getElementById('index.html').innerHTML;
 
     // Função para mostrar conteúdo
     function mostrarConteudo(conteudo) {
