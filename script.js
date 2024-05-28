@@ -1,7 +1,7 @@
 document.getElementById('tema2').addEventListener('click', function (event) {
     event.preventDefault();
 
-    document.getElementById('theme').innerHTML = "<link rel='stylesheet' href='theme2.css'><button id='tema2' class='nav-link'><a href='index.html'style='color: #fffcd6'>Claro</a></button>";
+    document.getElementById('theme').innerHTML = "<link rel='stylesheet' href='theme2.css'><a class='nav-link href='index.html'style='color: #fffcd6'>Claro</a>";
     
 });
 
