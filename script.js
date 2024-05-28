@@ -1,15 +1,9 @@
 document.getElementById('tema2').addEventListener('click', function (event) {
     event.preventDefault();
 
-    document.getElementById('theme').innerHTML = "<link rel='stylesheet' href='theme2.css'><button id='tema1' class='nav-link'><a href='#'style='color: #fffcd6'>Claro</a></button>";
+    document.getElementById('theme').innerHTML = "<link rel='stylesheet' href='theme2.css'>";
     
 
-});
-
-document.getElementById('tema1').addEventListener('click', function(event){
-    event.preventDefault();
-
-    document.getElementById('theme').innerHTML = "<link rel='stylesheet' href='theme1.css'><button id='tema2' class='nav-link'><a href='#'style='color: #fffcd6'>Escuro</a></button>";
 });
 
 // Adiciona event listener ao botão "Jogos"
