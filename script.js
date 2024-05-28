@@ -1,3 +1,12 @@
+document.getElementById('tema2').addEventListener('click', function (event){
+    event.preventDefault();
+
+    var novoTema = document.getElementById('noturno').innerHTML;
+
+    document.getElementById('principal').innerHTML ="<style>"+novoTema+"</style>"
+    
+
+});
 
 // Adiciona event listener ao botão "Jogos"
 document.getElementById('botaojogo').addEventListener('click', function (event) {

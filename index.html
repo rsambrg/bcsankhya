@@ -15,9 +15,11 @@
 
 
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body class="p-3 m-0 border-0 bd-example m-0 border-0">
+
     <!--Barra de navegação-->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid" id="navegadorbarra">
@@ -30,6 +32,43 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- AS OPÇOES COMEÇAM AQUI -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <button id="tema1"  class="nav-link"><a href="index.html" style="color: #fffcd6">Tema 1</a></button>
+                        <div id="principal">
+                        <style>
+                            :root {
+                                --color-011: #dc7272;
+                                --color-012: #d94343;
+                                --color-013: #c90606;
+
+                                --color-021: #a2cc07;
+                                --color-022: #53901a;
+                                --color-023: #3f6e13;
+                                --color-024: #045e2f;
+
+                                --color-taskbar1: #fffdd0;
+                                --color-taskbar2: #d0cc93;
+
+                                --color-031: #f4e7e7;
+                                --color-032: #fffcd6;
+                                --color-033: #fffcd66a;
+                                --color-034: #f9f6e0ec;
+
+                                --color-gold: #d7a526;
+                                --color-gold2: #d7a52612;
+                                --color-gold3: #d7a5264a;
+
+                                --color-font1: #022916;
+                                --color-font2: #2f0404;
+
+                                --color-shadow: #14012443;
+                            }
+                        </style>
+                        </div>
+                    </li>
+                    <li>
+                        <button id="tema2"  class="nav-link">tema 2</button>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
                     </li>
@@ -82,7 +121,7 @@
         <div class="content">
             <div name="meu_conteudo">
                 <!--Header e Main -->
-                <div id="conteudoAtual"class="mt-5">
+                <div id="conteudoAtual" class="mt-5">
                     <header>
                         <h1>R. Sambrg</h1>
                         <h3>Meus links, projetos pessoais e estudos</h3>
@@ -91,13 +130,15 @@
                     <main>
 
                         <h2>Seja bem-vindo ao meu perfil!</h2>
-                        <div class="novidades" style="width: 70vw;max-width: 500px;max-height: fit-content;padding: 1vw;">
+                        <div class="novidades"
+                            style="width: 70vw;max-width: 500px;max-height: fit-content;padding: 1vw;">
                             <div style="display: flex;flex-wrap: wrap;width:300px;">
-                               Aqui você vai encontrar atualizações, notas e observações e também vai poder acompanhar meu
-                            progresso!
+                                Aqui você vai encontrar atualizações, notas e observações e também vai poder acompanhar
+                                meu
+                                progresso!
 
-                            Atualmente participando de um Bootcamp! 
-                            </div> 
+                                Atualmente participando de um Bootcamp!
+                            </div>
                         </div>
 
                         <a href="#" class="dropdown-item botaoTrocar">
@@ -209,18 +250,48 @@
             <div id="jogos_pagina" style="display: none;">
                 <h1 style="color:green;">EM MANUTENÇÃO!</h1>
                 <h3>Jogos</h3>
-                <a href="https://rsambrg.github.io/jogos/jogo%20do%20aviao/flappy.html" style="font-weight: bold;color: lightseagreen;">Jogo do Avião</a>
+                <a href="https://rsambrg.github.io/jogos/jogo%20do%20aviao/flappy.html"
+                    style="font-weight: bold;color: lightseagreen;">Jogo do Avião</a>
             </div>
         </div>
     </div>
     <!--Fim do terceiro box-->
     </div>
     <script src="script.js" defer></script>
-
 </body>
 <footer class="fixed bottom">
     <p>&copy; 2024 HTML
         R. Sambrg</p>
 </footer>
+<div id="noturno" style="display: none;">
+    :root {
+        --color-011: #1e0d23;
+        --color-012: #441e4f;
+        --color-013: #ad49c9;
 
+        --color-021: #919193;
+        --color-022: #6a6a6b;
+        --color-023: #3e3d3e;
+        --color-024: #171717;
+
+        --color-taskbar1: #54475c;
+        --color-taskbar2: #1d0123;
+
+        --color-031: #ededed;
+        --color-032: #c4c0c0;
+        --color-033: #a1a19e6a;
+        --color-034: #252425ec;
+
+        --color-gold: #636363;
+        --color-gold2: #1d1d1d12;
+        --color-gold3: #1d1d1d4a;
+
+        --color-font1: #ffffff;
+        --color-font2: #ffffff;
+
+        --color-shadow: #14012443;
+
+    }
+    
+</div>
 </html>
