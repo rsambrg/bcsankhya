@@ -62,27 +62,33 @@ document.addEventListener('DOMContentLoaded', function () {
         // Seleciona todas as divs com a classe listaConteudo
         var listaConteudoDivs = document.querySelectorAll('.listaConteudo');
 
-        if (!div.querySelector('.taskbar')) {
+        // Itera sobre cada div listaConteudo
+        listaConteudoDivs.forEach(function (div) {
+            // Cria a taskbar
             var taskbar = document.createElement('div');
             taskbar.classList.add('taskbar');
+
+            // Botão para fechar
             var closeButton = document.createElement('button');
             closeButton.classList.add('close-btn');
-            closeButton.innerHTML = '&times;';
+            closeButton.innerHTML = '&times;'; // Adiciona o ícone de X
             taskbar.appendChild(closeButton);
+
+            // Botão para expandir/recolher
             var expandButton = document.createElement('button');
             expandButton.classList.add('expand-btn');
-            expandButton.innerHTML = '&#9633;';
+            expandButton.innerHTML = '&#9633;'; // Adiciona o ícone de quadrado
             taskbar.appendChild(expandButton);
+
+            // Adiciona a taskbar à div
             div.insertBefore(taskbar, div.firstChild);
 
-            // Aqui adicionamos o conteúdo real da lista
-            var listaId = div.getAttribute('data-lista');
-            var listaConteudo = document.getElementById(listaId);
-            div.appendChild(listaConteudo);
-
+            // Adiciona event listener ao botão de fechar
             closeButton.addEventListener('click', function () {
                 div.style.display = 'none';
             });
+
+            // Adiciona event listener ao botão de expandir/recolher
             expandButton.addEventListener('click', function () {
                 if (div.style.width === '10vw') {
                     div.style.width = '70vw';
@@ -90,8 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     div.style.width = '10vw';
                 }
             });
-        }
-
+        });
     }
 
     // Após inserir o HTML no elemento conteudoAtual
