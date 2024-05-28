@@ -1,9 +1,8 @@
 document.getElementById('tema2').addEventListener('click', function (event) {
     event.preventDefault();
 
-    document.getElementById('theme').innerHTML = "<link rel='stylesheet' href='theme2.css'>";
+    document.getElementById('theme').innerHTML = "<link rel='stylesheet' href='theme2.css'>;"
     
-
 });
 
 // Adiciona event listener ao botão "Jogos"
