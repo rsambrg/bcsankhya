@@ -58,12 +58,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Função para adicionar taskbar às divs listaConteudo
-    function addTaskbarToLists() {
-        // Seleciona todas as divs com a classe listaConteudo
-        var listaConteudoDivs = document.querySelectorAll('.listaConteudo');
+function addTaskbarToLists() {
+    // Seleciona todas as divs com a classe listaConteudo
+    var listaConteudoDivs = document.querySelectorAll('.listaConteudo');
 
-        // Itera sobre cada div listaConteudo
-        listaConteudoDivs.forEach(function (div) {
+    // Itera sobre cada div listaConteudo
+    listaConteudoDivs.forEach(function (div) {
+        // Verifica se a taskbar já foi adicionada
+        if (!div.querySelector('.taskbar')) {
             // Cria a taskbar
             var taskbar = document.createElement('div');
             taskbar.classList.add('taskbar');
@@ -96,8 +98,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     div.style.width = '10vw';
                 }
             });
-        });
-    }
+        }
+    });
+}
+
 
     // Após inserir o HTML no elemento conteudoAtual
     document.querySelectorAll('.botaoTrocar').forEach(function (element) {
