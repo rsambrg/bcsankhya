@@ -10,7 +10,7 @@ document.getElementById('tema1').addEventListener('click', function(event){
     event.preventDefault();
 
     document.getElementById('theme').innerHTML = "<link rel='stylesheet' href='theme1.css'><button id='tema2' class='nav-link'><a href='index.html'style='color: #fffcd6'>Escuro</a></button>";
-})
+});
 
 // Adiciona event listener ao botão "Jogos"
 document.getElementById('botaojogo').addEventListener('click', function (event) {
