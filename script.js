@@ -15,8 +15,15 @@ document.getElementById('botaojogo').addEventListener('click', function (event) 
     // Insere o novo conteúdo em conteudoAtual
     document.getElementById('conteudoAtual').innerHTML = novoConteudo;
 });
+/*
+document.getElementById('botaoinicio').addEventListener('click', function (event){
+    event.preventDefault();
 
+    varnovoConteudo = document.getElementById('inicio_pagina').innerHTML;
 
+    document.getElementById('conteudoAtual').innerHTML = novoConteudo;
+})
+*/
 
 // Função para adicionar taskbar às divs listaConteudo
 function addTaskbarToLists() {
