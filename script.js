@@ -1,9 +1,7 @@
-document.getElementById('tema2').addEventListener('click', function (event){
+document.getElementById('tema2').addEventListener('click', function (event) {
     event.preventDefault();
 
-    var novoTema = document.getElementById('noturno').innerHTML;
-
-    document.getElementById('principal').innerHTML ="<style>"+novoTema+"</style>"
+    document.getElementById('theme').innerHTML = "<link rel='stylesheet' href='theme2.css'>";
     
 
 });
