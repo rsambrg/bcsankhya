@@ -1,0 +1,70 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, sans-serif;
+}
+.header{
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+.nav{
+    display: flex;
+    justify-content: center;
+}
+.nav-list{
+    display: flex;
+    list-style: none;
+}
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+.main-content{
+    padding: 2rem;
+}
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+.flex-item{
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    flex: 1 1 calc(33.333% - 2rem);
+    text-align: center;
+}
+.footer{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+@media (max-width: 768px) {
+    .flex-item{ 
+    flex: 1 1 calc (50% 2rem)
+    }
+}
+@media (max-width: 480px) {
+    .flex-item{
+    flex: 1 1 100%;
+    }
+}
+
+/*
+Móvel: 360 x 640.
+Móvel: 375 x 667.
+Móvel: 360 x 720.
+iPhone X: 375 x 812.
+Pixel 2: 411 x 731.
+Tabuleiro: 768 x 1024.
+Portátil: 1366 x 768.
+Laptop ou desktop de alta resolução: 1920 x 1080.
+*/

@@ -1,0 +1,71 @@
+Sebastião - 
+
+Ficará responsável pelo Index.html, paleta de cores do CSS (esperar o Douglas escolher as imagens antes de criar a paleta), o navbar e uma landingpage chamada depoimentos.html com um carrossel de depoimentos. Colocar square.png e texto lorem ipsum na página pra Rebeca e Douglas substituirem com a parte deles depois
+1. Estrutura Geral:
+   - Utilize a última versão do Bootstrap.
+   - A página deve ser responsiva e funcionar bem em dispositivos móveis, tablets e desktops.
+
+2. Cabeçalho (Header):
+   - Inclua uma barra de navegação fixa no topo da página.
+   - A barra de navegação deve conter o logotipo do produto e links para as seções principais da página (Ex: Sobre, Recursos, Preços, Contato).
+
+5. Seção de Depoimentos (Testimonials):
+   - Inclua uma seção com depoimentos de clientes satisfeitos.
+   - Utilize o componente `carousel` do Bootstrap para criar um slideshow de depoimentos.
+
+Rebeca - 
+
+Responsável pelo banner de apresentação no topo da página (onde ta escrito titulo principal), landing page de contatos (contato.html), a seção de features será feita pela rebeca e ficará na pagina index.html (onde tem 3 imagens em fileira no wireframe) porém o sebastião vai criar o index e deixar imagens pretas no local do feature pra Rebeca alterar depois e vai colocar um texto LOREM IPSUM em baixo das imagens pretas.
+
+3. Seção de Apresentação (Hero Section):
+   - Crie uma seção de destaque no topo da página com uma imagem de fundo impactante do produto.
+   - Inclua um título chamativo e uma descrição breve do produto.
+   - Adicione um botão de call-to-action (CTA) utilizando o componente `btn` do Bootstrap.
+
+4. Seção de Recursos (Features):
+   - Liste pelo menos três principais recursos ou benefícios do produto.
+   - Utilize uma grade (grid) do Bootstrap para alinhar os recursos em colunas.
+   - Inclua ícones para representar visualmente cada recurso, usando ícones do Bootstrap ou Font Awesome.
+
+7. Seção de Contato (Contact):
+   - Adicione um formulário de contato com campos para nome, e-mail, assunto e mensagem.
+   - Utilize os componentes de formulário do Bootstrap para estilizar os campos de entrada.
+   - Inclua um botão de envio para o formulário, estilizado com a classe `btn`.
+
+Douglas - 
+
+Landingpage dos preços (prices.html), footer, escolha das imagens e do nome do produto (Rebeca e Sebastião usarem o nome NONEPRODUCT em todos os campos pra substituir quando o Douglas terminar de escolher e usar imagens SQUARE.PNG anexada no github até o Douglas terminar de escolher pra poder trocar).
+
+
+9. Imagens:
+   - Utilize imagens de alta qualidade e gratuitas do banco de dados Unsplash (https://unsplash.com/pt-br).
+   - As imagens devem ser relevantes ao produto e bem integradas no design da página.
+
+6. Seção de Preços (Pricing):
+   - Crie uma tabela de preços com pelo menos três planos diferentes.
+   - Utilize as classes de cartão (`card`) do Bootstrap para estilizar cada plano de preços.
+   - Inclua um botão de call-to-action em cada cartão de preços.
+
+8. Rodapé (Footer):
+   - Inclua um rodapé fixo na parte inferior da página.
+   - O rodapé deve conter links rápidos, informações de copyright e ícones de redes sociais.
+   - Utilize as classes de utilitário do Bootstrap para alinhar e estilizar o conteúdo do rodapé.
+
+
+
+Considerações finais - 
+Seções 10 e 11 vão ser decididas só após essas
+Utilizar loren ipsun, square.png e NONEPRODUCT nas situações onde você precisa de informaçoes de outra pessoa pra fazer a sua parte.
+
+Novo aviso - Sebastião, enquanto o Douglas não escolher as imagens, deixe o site todo preto e branco mesmo. E Douglas, escolha imagens que tenham a mesma paleta de cor entre si! square.png com 200px width e 200px height ja foi upado e usem ele!
+
+SOBRE AS CLASSES E OS ID - 
+Pra não gerar confusão no CSS, por favor coloquem uma SIGLA de voces na frente de todos os class e id q fizerem
+exemplo:
+class="container_rebeca"
+id="contato_rebeca"
+porque depois pra juntar vai ficar mais facil de resolver os problemas que vão começar aparecer
+
+
+ATUALIZAÇÃO 14:05
+O produto que a gente tá trabalhando é venda de plataforma de softwares para empresas. O Douglas já criou a tabela de preços e vai separar mais imagens. 

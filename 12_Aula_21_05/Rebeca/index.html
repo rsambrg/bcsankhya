@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/ce58b6802b.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body id="body_reb" class="p-3 m-0 border-0 bd-example m-0 border-0">
+    <!--
+        Rebeca - 
+
+        Responsável pelo banner de apresentação no topo da página (onde ta escrito titulo principal), 
+        landing page de contatos (contato.html), a seção de features será feita pela rebeca e ficará 
+        na pagina index.html (onde tem 3 imagens em fileira no wireframe) porém o sebastião vai criar 
+        o index e deixar imagens pretas no local do feature pra Rebeca alterar depois e vai colocar 
+        um texto LOREM IPSUM em baixo das imagens pretas.
+
+        3. Seção de Apresentação (Hero Section): [CONCLUIDO]
+        - Crie uma seção de destaque no topo da página com uma imagem de fundo impactante do produto.
+        - Inclua um título chamativo e uma descrição breve do produto.
+        - Adicione um botão de call-to-action (CTA) utilizando o componente `btn` do Bootstrap.
+
+        4. Seção de Recursos (Features):
+        - Liste pelo menos três principais recursos ou benefícios do produto.
+        - Utilize uma grade (grid) do Bootstrap para alinhar os recursos em colunas.
+        - Inclua ícones para representar visualmente cada recurso, usando ícones do Bootstrap ou Font Awesome.
+
+        7. Seção de Contato (Contact):
+        - Adicione um formulário de contato com campos para nome, e-mail, assunto e mensagem.
+        - Utilize os componentes de formulário do Bootstrap para estilizar os campos de entrada.
+        - Inclua um botão de envio para o formulário, estilizado com a classe `btn`.
+    -->
+    <header>
+        <h2>Projeto: Página de divulgação de produto</h2>
+        <h3>Grupo: Douglas, Sebastião e Rebeca <br>
+            Membro: Rebeca <br>
+            Tópicos: 3, 4 e 7</h3>
+    </header>
+    <div class="container_reb">
+        <main>
+            <div class="boxes_reb">
+                <p>3. Seção de Apresentação <span style="color: red;font-weight: bold;font-size: 15px;">CONCLUIDO</span>
+                </p>
+                <div class="box_reb" id="hero_reb" name="apresentação">
+                    <ul>
+                        <li style="padding-top: 2vw;"><img src="hero.jpg"
+                                style="width: 40vw; height: 30vw;padding: 2px;max-width: 450px;max-height: 350px;"
+                                class="img-fluid" ></li>
+                        <li id="nome_prod_reb"> FALCON SISTEMAS <br>
+                            <div class="botao_reb"><button type="button" class="btn btn-primary btn-lg"
+                                    style="border-radius: 30px;"><a href="#contato_reb">Tranforme Já!</a></button></div>
+                            <div style="width: 45vw;margin: 0 auto;">
+                                <p id="desc_reb">
+                                    Inovação e eficiência em consultoria para sistemas ERP.
+                                </p>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <p>4. Seção de Recursos (features) <span
+                    style="color: red;font-weight: bold;font-size: 15px;">CONCLUIDO</span></p>
+            <div class="box_reb" id="features_reb" style="padding: 0;">
+                <div class="d-flex justify-content-center">
+                    <div class="col-xs-12 col-sm-4" style="padding: 0;">
+                        <img src="person-chalkboard-solid.svg" class="img-fluid rounded mx-auto d-block"
+                            style="width: 25vw; height: 19vw;padding: 1vw;max-width: 250px;max-height: 180px;">
+                        <p class="text-center" style="padding: 1.0vw;">
+                            ProjetaFácil<br>
+                            Organize, colabore e conclua projetos com ProjetaFácil.
+                        </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-4" style="padding: 0;">
+                        <img src="brain-solid.svg" class="img-fluid rounded mx-auto d-block"
+                            style="width: 25vw; height: 19vw;padding: 1vw;max-width: 250px;max-height: 180px;">
+                        <p class="text-center" style="padding: 1.0vw;">
+                            Empresa Inteligente<br>
+                            Capacite sua equipe com a Empresa Inteligente, e-learning corporativo
+                        </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-4" style="padding: 0;">
+                        <img src="bullhorn-solid.svg" class="img-fluid rounded mx-auto d-block"
+                            style="width: 25vw; height: 19vw;padding: 1vw;max-width: 250px;max-height: 180px;">
+                        <p class="text-center" style="padding: 1.0vw;">
+                            AutoMarketing<br>
+                            Automatize, gerencie e otimize suas campanhas com AutoMarketing
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <p>7. Seção de Contato (Contact): <span
+                    style="color: red;font-weight: bold;font-size: 15px;">CONCLUIDO</span></p>
+            <div class="box_reb" id="contato_reb" style="max-width: 500px;max-height: 700px;">
+                <div class="row">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Nome" aria-label="First name">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Sobrenome" aria-label="Last name">
+                    </div>
+                </div>
+                <div class="mb-3" style="padding-top:5px;">
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="e-mail"
+                        control-id="ControlID-9">
+                </div>
+
+                <div class="col-12">
+                    <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                    <select class="form-select" id="inlineFormSelectPref">
+                        <option selected>Assunto.</option>
+                        <option value="1">Orçamento</option>
+                        <option value="2">Dúvida</option>
+                        <option value="3">Sugestão</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Outros assuntos</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Mensagem</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                        control-id="ControlID-10"></textarea>
+                </div>
+                <input class="btn btn-primary" type="submit" value="enviar">
+            </div>
+    </div>
+    </main>
+    </div>
+</body>
+
+</html>
