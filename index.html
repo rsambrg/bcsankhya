@@ -38,7 +38,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active botaoinicio" id="botaoinicio" aria-current="page"
-                            href="index.html">Inicio</a>
+                            href="index.html" data-target-box="box1">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://www.linkedin.com/in/eng-rebecasampaio/"><img
@@ -59,7 +59,7 @@
                         <!---->
                         <div class="botaoselecao">
                             <ul class="dropdown-menu">
-                                <li><a href="#" class="dropdown-item botaoTrocar">
+                                <li><a href="#" class="dropdown-item botaoTrocar" >
                                         Sankhya - SoulCode
                                     </a>
                                 </li>
@@ -81,6 +81,15 @@
 
     </nav>
     <!--Fim da barra de navegação-->
+    <div id="icones" style="max-width: 700px;max-height: 700px;">
+        <ul style="display: flex;flex-direction: column;justify-content: center;flex-wrap: wrap;font-size: 25px;">
+            <li><img src="icone/paint.png" class="img-responsive"style="width: 150px; height: 150px;"></li>
+            <li><a href="#"  class="nav-link botaopaint" id="botaopaint"style="text-shadow: 2px 2px 3px black;color: white;">Paint</a></li>
+            <li><img src="icone/bin.png" class="img-responsive"style="width: 150px; height: 150px;"></li>
+            <li><a href="#" style="text-shadow: 2px 2px 3px black;color: white;">Lixeira</a></li>
+        </ul>
+
+    </div>
     <!--Primeiro Box, onde fica a header e a main-->
     <div class="box container" id="box1">
         <div class="taskbar">
@@ -106,7 +115,6 @@
                                 progresso!
 
                                 Atualmente participando de um Bootcamp!
-
                             </div>
                         </div>
                         </p>
@@ -114,9 +122,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    </div>
-    </div>
     </div>
     <!--Fim do primeiro box-->
     <!--Box das listas de exercicios-->
@@ -143,7 +148,8 @@
                         <p> </p>
                     </div>
 
-                    <div class="listaConteudo" nome="lista_html" id="lista1" style="display: none;" class="mt-3">
+                    <!-- Conteúdo das listas -->
+                    <div class="listaConteudo" data-lista="lista1" style="display: none;" class="mt-3" id="lista1">
                         <ul>
                             <li><a href="SANKHYA/02_Aula_07_05/exercicios_01.html">Exercicio 01</a></li>
                             <li><a href="03_Aula_08_05/aula_03_tabela.html">Exercício - Tabela</a></li>
@@ -155,7 +161,7 @@
                         </ul>
                     </div>
 
-                    <div class="listaConteudo" nome="lista_css" id="lista2" style="display: none;" class="mt-3">
+                    <div class="listaConteudo" data-lista="lista2" style="display: none;" class="mt-3" id="lista2">
                         <ul>
                             <li><a href="07_Aula_14_05/index.html">Página de noticia</a></li>
                             <li><a href="08_Aula_15_05_2024/index.html">Login do facebook [réplica]</a></li>
@@ -165,7 +171,7 @@
                         </ul>
                     </div>
 
-                    <div class="listaConteudo" nome="lista_bootstrap" id="lista3" style="display: none;" class="mt-3">
+                    <div class="listaConteudo" data-lista="lista3" style="display: none;" class="mt-3" id="lista3">
                         <ul>
                             <li><a href="https://rsambrg.github.io/trabalho_produtossankhyaboot/">Trabalho em grupo -
                                     Página de produtos</a></li>
@@ -174,15 +180,7 @@
                         </ul>
                     </div>
 
-                    <div class="listaConteudo" nome="lista_javascript" id="lista4" style="display: none;" class="mt-3">
-                        <ul>
-                            <li><a href="13_Aula_27_05/script.js">Lista de Scripts 01</a></li>
-                            <li><a href="#">-</a></li>
-                            <li><a href="#">-</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="listaConteudo" nome="lista_bd" id="lista5" style="display: none;" class="mt-3">
+                    <div class="listaConteudo" data-lista="lista4" style="display: none;" class="mt-3" id="lista4">
                         <ul>
                             <li><a href="#">-</a></li>
                             <li><a href="#">-</a></li>
@@ -190,16 +188,21 @@
                         </ul>
                     </div>
 
-                    <div class="listaConteudo" nome="lista_java" id="lista6" style="display: none;" class="mt-3">
+                    <div class="listaConteudo" data-lista="lista5" style="display: none;" class="mt-3" id="lista5">
                         <ul>
                             <li><a href="#">-</a></li>
                             <li><a href="#">-</a></li>
                             <li><a href="#">-</a></li>
                         </ul>
                     </div>
-                </div>
 
-                <div id="teste" class="mt-3">
+                    <div class="listaConteudo" data-lista="lista6" style="display: none;" class="mt-3" id="lista6">
+                        <ul>
+                            <li><a href="#">-</a></li>
+                            <li><a href="#">-</a></li>
+                            <li><a href="#">-</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -221,7 +224,20 @@
         </div>
     </div>
     <!--Fim do terceiro box-->
+    <div class="box container" id="box4" name="paint" >
+        <div class="taskbar">
+            <button class="close-btn">&times;</button>
+            <button class="expand-btn">&#9633;</button>
+        </div>
+        <div class="content">
+            <div id="paint" style="display: none;">
+                <h3>paint</h3>
+                <p>Em Breve...</p>
+            </div>
+        </div>
     </div>
+    </div>
+    
     <script src="script.js" defer></script>
 </body>
 <footer class="fixed bottom">

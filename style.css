@@ -209,3 +209,7 @@ ul.dropdown-menu {
 .content {
     padding: 15px;
 }
+
+#icones{
+    position: absolute;
+}

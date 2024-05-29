@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const botaoinicio = document.getElementById('botaoinicio');
     const botaojogo = document.getElementById('botaojogo');
+    const botaoPaint = document.getElementById('botaopaint');
     const tema = document.getElementById('tema');
 
     // Armazenar o conteúdo da página inicial em uma variável
@@ -11,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelectorAll('.conteudoAtual').forEach(function (element) {
             element.innerHTML = conteudo;
         });
+        addShowBoxListeners(); // Adicionar event listeners aos botões de mostrar caixas
     }
 
     // Mostrar a página inicial ao carregar a página
@@ -47,6 +49,18 @@ document.addEventListener('DOMContentLoaded', function () {
         mostrarConteudo(novoConteudo);
     });
 
+    // Adiciona event listener ao botão "Paint"
+    botaoPaint.addEventListener('click', function (event) {
+        event.preventDefault(); // Cancela o comportamento padrão do link
+
+        // Pega o conteúdo da div jogos_pagina
+        var novoConteudo = document.getElementById('paint').innerHTML;
+
+        // Insere o novo conteúdo em conteudoAtual
+        mostrarConteudo(novoConteudo);
+    });
+
+
     // Adicionando eventos de clique para os botões de trocar
     document.querySelectorAll('.botaoTrocar').forEach(button => {
         button.addEventListener('click', function (e) {
@@ -57,50 +71,67 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Função para adicionar taskbar às divs listaConteudo
-function addTaskbarToLists() {
-    // Seleciona todas as divs com a classe listaConteudo
-    var listaConteudoDivs = document.querySelectorAll('.listaConteudo');
+    function addTaskbarToLists() {
+        // Seleciona todas as divs com a classe listaConteudo
+        var listaConteudoDivs = document.querySelectorAll('.listaConteudo');
 
-    // Itera sobre cada div listaConteudo
-    listaConteudoDivs.forEach(function (div) {
-        // Verifica se a taskbar já foi adicionada
-        if (!div.querySelector('.taskbar')) {
-            // Cria a taskbar
-            var taskbar = document.createElement('div');
-            taskbar.classList.add('taskbar');
+        // Itera sobre cada div listaConteudo
+        listaConteudoDivs.forEach(function (div) {
+            // Verifica se a taskbar já foi adicionada
+            if (!div.querySelector('.taskbar')) {
+                // Cria a taskbar
+                var taskbar = document.createElement('div');
+                taskbar.classList.add('taskbar');
 
-            // Botão para fechar
-            var closeButton = document.createElement('button');
-            closeButton.classList.add('close-btn');
-            closeButton.innerHTML = '&times;'; // Adiciona o ícone de X
-            taskbar.appendChild(closeButton);
+                // Botão para fechar
+                var closeButton = document.createElement('button');
+                closeButton.classList.add('close-btn');
+                closeButton.innerHTML = '&times;'; // Adiciona o ícone de X
+                taskbar.appendChild(closeButton);
 
-            // Botão para expandir/recolher
-            var expandButton = document.createElement('button');
-            expandButton.classList.add('expand-btn');
-            expandButton.innerHTML = '&#9633;'; // Adiciona o ícone de quadrado
-            taskbar.appendChild(expandButton);
+                // Botão para expandir/recolher
+                var expandButton = document.createElement('button');
+                expandButton.classList.add('expand-btn');
+                expandButton.innerHTML = '&#9633;'; // Adiciona o ícone de quadrado
+                taskbar.appendChild(expandButton);
 
-            // Adiciona a taskbar à div
-            div.insertBefore(taskbar, div.firstChild);
+                // Adiciona a taskbar à div
+                div.insertBefore(taskbar, div.firstChild);
 
-            // Adiciona event listener ao botão de fechar
-            closeButton.addEventListener('click', function () {
-                div.style.display = 'none';
-            });
+                // Adiciona event listener ao botão de fechar
+                closeButton.addEventListener('click', function () {
+                    div.style.display = 'none';
+                });
 
-            // Adiciona event listener ao botão de expandir/recolher
-            expandButton.addEventListener('click', function () {
-                if (div.style.width === '10vw') {
-                    div.style.width = '70vw';
-                } else {
-                    div.style.width = '10vw';
+                // Adiciona event listener ao botão de expandir/recolher
+                expandButton.addEventListener('click', function () {
+                    if (div.style.width === '10vw') {
+                        div.style.width = '70vw';
+                    } else {
+                        div.style.width = '10vw';
+                    }
+                });
+            }
+        });
+    }
+
+    function addShowBoxListeners() {
+        document.querySelectorAll('[data-target-box]').forEach(function (button) {
+            button.addEventListener('click', function () {
+                var boxId = this.getAttribute('data-target-box');
+                var box = document.getElementById(boxId);
+
+                if (box) {
+                    // Alterna a visibilidade da caixa
+                    if (box.style.display === 'none' || box.style.display === '') {
+                        box.style.display = 'block';
+                    } else {
+                        box.style.display = 'none';
+                    }
                 }
             });
-        }
-    });
-}
+        });
+    }
 
 
     // Após inserir o HTML no elemento conteudoAtual
@@ -175,6 +206,7 @@ function addTaskbarToLists() {
         }
     }
 
+    addShowBoxListeners(); 
     // Show the first box by default
     showBox('box1');
 
