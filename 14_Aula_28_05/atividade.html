@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: rgb(82, 121, 212);
+            background-image: linear-gradient(to bottom, rgba(0, 0, 255, 0.074),rgba(253, 253, 255, 0.43));
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        button{
+            border-radius: 5px;
+            border-style: none;
+            background-color: rgb(82, 121, 212);
+            color: white;
+            box-shadow: 0px 0px 5px rgba(25, 2, 66, 0.303);
+            font-weight: bold;
+            padding: 5px;
+        }
+        li {
+            background-color: white;
+            padding: 20px;
+            border-style: inset;
+            max-width: 200px;
+            border-color: rgb(82, 121, 212);
+            border-width: 3px;
+            border-radius: 5px;
+        }
+
+        li:hover {
+            border-style: inset;
+        }
+
+        li:active {
+            border-style: inset;
+        }
+    </style>
+    <ul style="display: flex;flex-direction: row;flex-wrap: wrap;  list-style: none;padding: 10px;">
+        <li>
+            <h3>1. Digite um número positivo!</h3>
+            <label for="idade">Número:</label>
+            <input type="number" id="01_npositivo" name="positivo">
+            <button onclick="somarNumero()">Somar!</button>
+            <p id="01_resultado"></p>
+        </li>
+        <li>
+            <h3>2. Tabuada</h3>
+            <label for="num_02">Número:</label>
+            <input type="number" id="num_02" name="num_02">
+            <button onclick="tabuada()">Somar!</button>
+            <p id="02_resultado"></p>
+        </li>
+        <li>
+            <h3>3. Fatorial</h3>
+            <label for="num_03">Número:</label>
+            <input type="number" id="num_03" name="num_03">
+            <button onclick="fatorial()">Somar!</button>
+            <p id="03_resultado"></p>
+        </li>
+        <li>
+            <h3>4. Primos</h3>
+            <label for="num_04">Número:</label>
+            <input type="number" id="num_04" name="num_04">
+            <button onclick="primos()">Somar!</button>
+            <p id="04_resultado"></p>
+        </li>
+        <li>
+            <h3>5. Fibonacci</h3>
+            <label for="num_05">Número:</label>
+            <input type="number" id="num_05" name="num_05">
+            <button onclick="fibonacci()">Somar!</button>
+            <p id="05_resultado"></p>
+        </li>
+        <li>
+            <h3>6. Média de notas</h3>
+            <p>Bem-vindo ao meu programa de notas! </p>
+            <label for="num_6_nota">Nota:</label>
+            <input type="number" id="num_06_nota" name="num_06_nota">
+            <p>Digite 01 para continuar e 0 para parar!</p>
+            <label for="num_6">S ou N?:</label>
+            <input type="number" id="num_06" name="num_06">
+            <button onclick="continua()">Enviar</button>
+            <p id="06_resultado"></p>
+        </li>
+        <li>
+            <h3>7. Adivinhe o numero!</h3>
+            <label for="num_07">Digite 1 para começar e 2 para parar!</label>
+            <input type="number" id="num_07" name="num_07">
+            <button onclick="adivinhe()">Vamos!</button>
+            <p id="07_resultado"></p>
+            <br>
+            <label for="num_07_resp">Eu acho que é o número...</label>
+            <input type="number" id="num_07_resp" name="num_07_resp">
+            <button onclick="adivinhe()">Estou com sorte!</button>
+        </li>
+        <li>
+            <h3>8. Contador</h3>
+            <label for="num_08">Número:</label>
+            <input type="number" id="num_08" name="num_08">
+            <button onclick="contador()">Insira um numero inteiro</button>
+            <p id="08_resultado"></p>
+        </li>
+        <li>
+            <h3>9. Par ou Impar!</h3>
+            <label for="num_09">Número:</label>
+            <input type="number" id="num_09" name="num_09">
+            <button onclick="ParOuImpar()">Somar!</button>
+            <p id="09_resultado"></p>
+        </li>
+        <li>
+            <h3>10. Media Ponderada</h3>
+            <p>Bem-vindo ao meu programa de notas! </p>
+            <label for="num_10_nota">Nota:</label>
+            <input type="number" id="num_10_nota" name="num_10_nota">
+            <label for="num_10_nota">Peso:</label>
+            <input type="number" id="num_10_peso" name="num_10_peso">
+            <p>Digite 01 para continuar e 0 para parar!</p>
+            <label for="num_10">S ou N?:</label>
+            <input type="number" id="num_10" name="num_10">
+            <button onclick="mediaPonderada()">Calcular</button>
+            <p id="10_resultado"></p>
+        </li>
+    </ul>
+
+</body>
+<script src="atividade.js"></script>
+
+</html>

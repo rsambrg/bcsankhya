@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: rgb(82, 121, 212);
+            background-image: linear-gradient(to bottom, rgba(0, 0, 255, 0.074),rgba(253, 253, 255, 0.43));
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        button{
+            border-radius: 5px;
+            border-style: none;
+            background-color: rgb(82, 121, 212);
+            color: white;
+            box-shadow: 0px 0px 5px rgba(25, 2, 66, 0.303);
+            font-weight: bold;
+            padding: 5px;
+        }
+        li {
+            background-color: white;
+            padding: 20px;
+            border-style: inset;
+            max-width: 200px;
+            border-color: rgb(82, 121, 212);
+            border-width: 3px;
+            border-radius: 5px;
+        }
+
+        li:hover {
+            border-style: inset;
+        }
+
+        li:active {
+            border-style: inset;
+        }
+    </style>
+    <ul style="display: flex;flex-direction: row;flex-wrap: wrap;  list-style: none;padding: 10px;">
+        <li>
+            <h3>1.Função de saudação</h3>
+            <label for="01">Qual seu nome?</label>
+            <input type="text" id="01" name="01_saudação">
+            <button onclick="saudacao()">E aí!</button>
+            <p id="01_resultado"></p>
+        </li>
+        <li>
+            <h3>2.Função de soma</h3>
+            <label for="02_01">Numero 01:</label>
+            <input type="number" id="02_01" name="02_n01">
+            <label for="02_02">Numero 02:</label>
+            <input type="number" id="02_02" name="02_n02">
+            <button onclick="func_soma()">Somar!</button>
+            <p id="02_resultado"></p>
+        </li>
+        <li>
+            <h3>3.Função de subtração</h3>
+            <label for="03_01">Numero 01:</label>
+            <input type="number" id="03_01" name="03_n01">
+            <label for="03_02">Numero 02:</label>
+            <input type="number" id="03_02" name="03_n02">
+            <button onclick="func_sub()">Subtrair!</button>
+            <p id="03_resultado"></p>
+        </li>
+        <li>
+            <h3>4.Função de multiplicação</h3>
+            <label for="04_01">Número 01:</label>
+            <input type="number" id="04_01" name="04_n01">
+            <label for="04_02">Numero 02:</label>
+            <input type="number" id="04_02" name="04_n01">
+            <button onclick="func_mult()">Multiplicar!</button>
+            <p id="04_resultado"></p>
+        </li>
+        <li>
+            <h3>5.Função de divisão</h3>
+            <label for="05_01">Numero 01:</label>
+            <input type="number" id="05_01" name="05_n01">
+            <label for="05_02">Numero 2:</label>
+            <input type="number" id="05_02" name="05_n02">
+            <button onclick="func_div()">DIVIDIR!</button>
+            <p id="05_resultado"></p>
+        </li>
+        <li>
+            <h3>6. Fatorial</h3>
+            <label for="06">Escolha o número:</label>
+            <input type="number" id="06" name="06">
+            <button onclick="fatorial()">Fatorar...</button>
+            <p id="06_resultado"></p>
+        </li>
+        <li>
+            <h3>7. Primos</h3>
+            <label for="07">Escolha um numero:</label>
+            <input type="number" id="07" name="07">
+            <button onclick="primo()">Descubra</button>
+            <p id="07_resultado"></p>
+        </li>
+        <li>
+            <h3>8. Array com media</h3>
+            <label for="08_01">Escolha o numero:</label>
+            <input type="number" id="08_01" name="08_n01">
+            <label for="08_02">Digite 1 para continuar e 0 para parar:</label>
+            <input type="number" id="08_02" name="08_n02">
+            <button onclick="continua()">Ok</button>
+            <p id="08_resultado"></p>
+        </li>
+        <li>
+            <h3>9. InverterString</h3>
+            <label for="09">Fale alguma coisa!</label>
+            <input type="text" id="09" name="09">
+            <button onclick="inverterString()">Ok</button>
+            <p id="09_resultado"></p>
+        </li>
+        <li>
+            <h3>10. Conta Caracteres</h3>
+            <label for="10">Insira uma frase ou palavra!</label>
+            <input type="text" id="10_01" name="10_01">
+            <label for="10">Insira um caractere da sua preferencia!</label>
+            <input type="text" id="10_02" name="10_02" maxlength="1">
+            <button onclick="contarCaracteres()">Ok</button>
+            <p id="10_resultado"></p>
+        </li>
+        <li>
+            <h3>11. Função anonima</h3>
+            <label for="11">Numero 1:</label>
+            <input type="number" id="11_01" name="11_01">
+            <label for="11">Numero 2:</label>
+            <input type="number" id="11_02" name="11_02">
+            <button onclick="anonima()">ok</button>
+            <p id="11_resultado"></p>
+        </li>
+        <li>
+            <h3>12.Função Operação</h3>
+            <label for="12">Numero 1:</label>
+            <input type="number" id="12_01" name="12_01">
+            <label for="12">Numero 2:</label>
+            <input type="number" id="12_02" name="12_02">
+            <label for="12">Função:</label>
+            <select name="funcao" id="opcao">
+                <option value="0">--escolha--</option>
+                <option value="1">Soma</option>
+                <option value="2">Subtração</option>
+                <option value="3">Divisão</option>
+                <option value="4">Multiplicaçao</option>
+            </select>
+            <button onclick="operacao()">ok</button>
+            <p id="12_resultado"></p>
+        </li>
+        <li>
+            <h3>13. Função saudação</h3>
+            <label for="13">Saudação:</label>
+            <input type="text" name="13_saudo" id="13_saudo">
+            <label for="13">Nome:</label>
+            <input type="text" id="13_nome" name="13_nome">
+            <button onclick="criarSaudacao()">Ok</button>
+            <p id="13_resultado"></p>
+        </li>
+        <li>
+            <h3>14. Contagem Regressiva</h3>
+            <label for="14">Numero:</label>
+            <input type="number" id="14" name="14">
+            <button onclick="contagemRegressiva()">Ok</button>
+            <p id="14_resultado"></p>
+
+        </li>
+        <li>
+            <h3>15. Fibonacci</h3>
+            <label for="15">Numero da sequencia:</label>
+            <input type="number" id="15" name="15">
+            <button onclick="fibonacci()">ok</button>
+            <p id="15_resultado"></p>
+        </li>
+        <li>
+            <h3>16.Celsius para Fahrenheit</h3>
+            <label for="16">Temperatura em celsius:</label>
+            <input type="number" id="16" name="16">
+            <button onclick="celsiusParaFahrenheit()">ok</button>
+            <p id="16_resultado"></p>
+        </li>
+        <li>
+            <h3>17. Fahrenheit para Celsius</h3>
+            <label for="17">Temperatura em fahrenheit:</label>
+            <input type="number" id="17" name="17">
+            <button onclick="fahrenheitParaCelsius()">ok</button>
+            <p id="17_resultado"></p>
+        </li>
+        <li>
+            <h3>18. É par!</h3>
+            <label for="18">Numero:</label>
+            <input type="number" id="18" name="18">
+            <button onclick="ePar()">ok</button>
+            <p id="18_resultado"></p>
+        </li>
+        <li>
+            <h3>19. Quadrado</h3>
+            <label for="19">Numero:</label>
+            <input type="number" id="19" name="19">
+            <button onclick="quadrado()">ok</button>
+            <p id="19_resultado"></p>
+        </li>
+        <li>
+            <h3>20. Raiz Quadrada</h3>
+            <label for="20">Numero:</label>
+            <input type="number" id="20" name="20">
+            <button onclick="raizQuadrada()">ok</button>
+            <p id="20_resultado"></p>
+        </li>
+        <li>
+            <h3>21. Contar Vogais!</h3>
+            <label for="21">Frase ou palavra:</label>
+            <input type="text" id="21" name="21">
+            <button onclick="contarVogais()">ok</button>
+            <p id="21_resultado"></p>
+        </li>
+        <li>
+            <h3>22. Palindromo</h3>
+            <label for="22">Frase ou palavra:</label>
+            <input type="text" id="22" name="22">
+            <button onclick="ePalindromo()">ok</button>
+            <p id="22_resultado"></p>
+        </li>
+        <li>
+            <h3>23. Maior numero!</h3>
+            <label for="23">Numero:</label>
+            <input type="number" id="23" name="23">
+            <button onclick="maiorNumero(1)">ok</button>
+            <button onclick="maiorNumero(0)">Terminei!</button>
+            <p id="23_resultado"></p>
+        </li>
+        <li>
+            <h3>24. Ordenador Array</h3>
+            <label for="24">Insira os numeros separados por virgula:</label>
+            <input type="text" id="24" name="24">
+            <button onclick="ordenarArray()">ok</button>
+            <p id="24_resultado"></p>
+        </li>
+        <li>
+            <h3>25. Filtrar Pares</h3>
+            <label for="25">Numero:</label>
+            <input type="number" id="25" name="25">
+            <button onclick="filtrarPares(1)">ok</button>
+            <button onclick="filtrarPares(0)">Terminei</button>
+            <p id="25_resultado"></p>
+        </li>
+        <li>
+            <h3>26. Concater Arrays</h3>
+            <label for="26">Array 1:</label>
+            <input type="number" id="26_01" name="26">
+            <label for="26">Array 2:</label>
+            <input type="number" id="26_02" name="26">
+            <button onclick="concatenarArrays(1)">ok</button>
+            <button onclick="concatenarArrays(0)">Terminei!</button>
+            <p id="26_resultado"></p>
+        </li>
+        <li>
+            <h3>27. Memo Fatorial</h3>
+            <label for="27">Numero:</label>
+            <input type="number" id="27" name="27">
+            <button onclick="memoFatorial()">ok</button>
+            <p id="27_resultado"></p>
+        </li>
+        <li>
+            <h3>28. Contem substring</h3>
+            <label for="28">Frase 1:</label>
+            <input type="text" id="28_01" name="28">
+            <label for="28">Frase 2:</label>
+            <input type="text" id="28_02" name="28">
+            <button onclick="contemSubstring()">ok</button>
+            <p id="28_resultado"></p>
+        </li>
+        <li>
+            <h3>29. Função de Curry para Somar Três Números</h3>
+            <label for="29_01">Número 1:</label>
+            <input type="number" id="29_01" name="29_01"><br><br>
+            <label for="29_02">Número 2:</label>
+            <input type="number" id="29_02" name="29_02"><br><br>
+            <label for="29_03">Número 3:</label>
+            <input type="number" id="29_03" name="29_03"><br><br>
+            <button onclick="currySoma()">Calcular</button>
+            <p id="29_resultado"></p>
+        </li>
+        <li>
+            <h3>30. Reduzir Array</h3>
+            <label for="30">Numero:</label>
+            <input type="text" name="30" id="30">
+            <button onclick="calcularArray()">Ok</button>
+            <p id="30_resultado"></p>
+        </li>
+        <li>
+            <h3>31. Remover duplicatas</h3>
+            <label for="31">Lista de numeros separados por virgula:</label>
+            <input type="text" name="31" id="31">
+            <button onclick="removerArray()">Ok</button>
+            <p id="31_resultado"></p>
+        </li>
+        <li>
+            <h3>32. Função de Composição</h3>
+            <label for="32">Número:</label>
+            <input type="number" id="32" name="32"><br><br>
+            <button onclick="compor2()">Calcular Composição</button>
+            <p id="32_resultado"></p>
+        </li>
+        <li>
+            <h3>33. Função para Mapear um Array</h3>
+            <label for="33">Números (separados por vírgula):</label>
+            <input type="text" id="33" name="33"><br><br>
+            <button onclick="calcularMapeamento()">Mapear</button>
+            <p id="33_resultado"></p>
+        </li>
+        <li>
+            <h3>34. Função de Ordenação Personalizada</h3>
+            <button onclick="n34()">Ordenar</button>
+            <p id="34_resultado"></p>
+        </li>
+        <li>
+            <h3>35. Função para Encontrar a Intersecção de Dois Arrays</h3>
+            <button onclick="n35()">Encontrar Interseção</button>
+            <p id="35_resultado"></p>
+        </li>
+    </ul>
+
+</body>
+<script src="atividade.js"></script>
+
+</html>
