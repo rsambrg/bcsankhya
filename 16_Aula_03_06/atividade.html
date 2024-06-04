@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: rgb(82, 121, 212);
+            background-image: linear-gradient(to bottom, rgba(0, 0, 255, 0.074), rgba(253, 253, 255, 0.43));
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        button {
+            border-radius: 5px;
+            border-style: none;
+            background-color: rgb(82, 121, 212);
+            color: white;
+            box-shadow: 0px 0px 5px rgba(25, 2, 66, 0.303);
+            font-weight: bold;
+            padding: 5px;
+        }
+
+        li {
+            background-color: white;
+            padding: 20px;
+            border-style: inset;
+            max-width: 200px;
+            border-color: rgb(82, 121, 212);
+            border-width: 3px;
+            border-radius: 5px;
+        }
+
+        li:hover {
+            border-style: inset;
+        }
+
+        li:active {
+            border-style: inset;
+        }
+    </style>
+    <ul style="display: flex;flex-direction: row;flex-wrap: wrap;  list-style: none;padding: 10px;">
+        <li class="li_01">
+            <h3>1.Soma de dois numeros</h3>
+            <label for="01">Numero 1:</label>
+            <input type="number" id="01_01">
+            <label for="01">Numero 2:</label>
+            <input type="number" id="01_02">
+            <button onclick="somaDois()">ok</button>
+            <p id="01_res"></p>
+        </li>
+        <li class="li_02">
+            <h3>2.Quadrado de um numero</h3>
+            <label for="02">Numero:</label>
+            <input type="number" id="02">
+            <button onclick="quadrado()">ok</button>
+            <p id="02_res"></p>
+        </li>
+        <li class="li_01">
+            <h3>3. Verificar Maioridade</h3>
+            <label for="03">Idade:</label>
+            <input type="number" id="03">
+            <button onclick="verfiIdade()">ok</button>
+            <p id="03_res"></p>
+        </li>
+        <li class="li_02">
+            <h3>4.Area do Retangulo</h3>
+            <label for="04">Largura:</label>
+            <input type="number" id="04_01">
+            <label for="04_02">Altura:</label>
+            <input type="number" id="04_02">
+            <button onclick="funcretangulo()">ok</button>
+            <p id="04_res"></p>
+        </li>
+        <li class="li_01">
+            <h3>5.Convertendo para Maiúsculas</h3>
+            <label for="05">insira aqui sua frase:</label>
+            <input type="text" id="05">
+            <button onclick="convertMasc()">ok</button>
+            <p id="05_res"></p>
+        </li>
+        <li class="li_01">
+            <h3>06. Filtrar Pares</h3>
+            <label for="05">NUMERO:</label>
+            <input type="text" id="06">
+            <button onclick="fun06()">ok</button>
+            <p id="06_res"></p>
+        </li>
+        <li class="li_02">
+            <h3>07. Calcular Media</h3>
+            <label for="05">NUMERO:</label>
+            <input type="text" id="07">
+            <button onclick="fun07()">ok</button>
+            <p id="07_res"></p>
+        </li>
+        <li class="li_01">
+            <h3>08. Verificar Palíndromo</h3>
+            <label for="05">Palavra:</label>
+            <input type="text" id="08">
+            <button onclick="fun08()">ok</button>
+            <p id="08_res"></p>
+        </li>
+        <li class="li_02">
+            <h3>09. Dobra Valores</h3>
+            <label for="05">NUMERO:</label>
+            <input type="text" id="09">
+            <button onclick="fun09()">ok</button>
+            <p id="09_res"></p>
+        </li>
+        <li class="li_01">
+            <h3>10. Fatorial</h3>
+            <label for="05">NUMERO:</label>
+            <input type="text" id="10">
+            <button onclick="fun10()">ok</button>
+            <p id="10_res"></p>
+        </li>
+        <li class="li_02">
+            <h3>11. Matriz Transposta</h3>
+            <label for="05">NUMERO:</label>
+            <input type="text" id="11">
+            <button onclick="fun11()">ok</button>
+            <p id="11_res"></p>
+        </li>
+        <li class="li_01">
+            <h3>12.Remover Duplicatas</h3>
+            <label for="05">NUMERO:</label>
+            <input type="text" id="12">
+            <button onclick="fun12()">ok</button>
+            <p id="12_res"></p>
+        </li>
+        <li class="li_02">
+            <h3>13. Mesclar Arrays</h3>
+            <label for="13_1">Array 1 - Número:</label>
+            <input type="text" id="13_1">
+            <button onclick="addToArray1()">Adicionar ao Array 1</button>
+            <br>
+            <label for="13_2">Array 2 - Número:</label>
+            <input type="text" id="13_2">
+            <button onclick="addToArray2()">Adicionar ao Array 2</button>
+            <br>
+            <button onclick="fun13()">Mesclar Arrays</button>
+            <p id="13_res"></p>
+        </li>
+        <li class="li_01">
+            <h3>14. conta ocorrencias</h3>
+            <label for="05">string:</label>
+            <input type="text" id="14">
+            <button onclick="fun14()">ok</button>
+            <p id="14_res"></p>
+        </li>
+        <li class="li_02">
+            <h3>15. Compor Funções</h3>
+            <label for="15">Número:</label>
+            <input type="number" id="15">
+            <button onclick="fun15()">Compor Funções</button>
+            <p id="15_res"></p>
+        </li>
+    </ul>
+
+</body>
+<script src="atividade.js"></script>
+
+</html>
