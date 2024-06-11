@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade - JS - Classes e Objetos</title>
+</head>
+<style>
+    body {
+        background-color: rgb(237, 237, 189);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    #questoes {
+        background-color: rgb(255, 255, 255);
+        padding: 30px;
+    }
+
+    #tabuleiro_02>li>span:hover {
+        flex-direction: row;
+        cursor: pointer;
+        background-color: yellow;
+    }
+</style>
+
+<body>
+    <header style="text-align: center;">
+        <h1>Atividade JS - Classes e Objetos</h1>
+    </header>
+    <div id="questoes" style="display: flex;margin: 0 auto;flex-wrap: wrap;max-width: 1200px;">
+        <div class="questao">
+            <p>
+                1. Calculadora de Geometria:
+                - Crie uma classe `Forma` que tenha métodos para calcular a área e o perímetro.
+                - Crie subclasses para formas geométricas como `Retângulo`, `Círculo`, `Triângulo`, etc., cada uma com
+                métodos para calcular sua área e perímetro específicos.
+            </p>
+            <h2>Calculadora</h2>
+            <div>
+                <h3>Retangulo</h3>
+                <label for="01">Altura:</label>
+                <input type="number" id="01_01_01">
+                <label for="01">Largura:</label>
+                <input type="number" id="01_01_02">
+                <button onclick="calculoRetangulo_01()">Ok</button>
+                <p id="res_01_01"></p>
+            </div>
+            <div>
+                <h3>Circulo</h3>
+                <label for="01">Raio:</label>
+                <input type="number" id="01_02">
+                <button onclick="calculoCirculo_01()">ok</button>
+                <p id="res_01_02"></p>
+            </div>
+            <div>
+                <h3>Triangulo Equilatero</h3>
+                <label for="01">Base:</label>
+                <input type="number" id="01_03_01">
+                <label for="01">Altura:</label>
+                <input type="number" id="01_03_02">
+                <label for="01">Lados:</label>
+                <input type="number" id="01_03_03">
+                <button onclick="calculoTriangulo_01()">ok</button>
+                <p id="res_01_03"></p>
+            </div>
+        </div>
+        <div class="questao">
+            <p>
+                2. Jogo da Velha:
+                - Crie uma classe `JogoDaVelha` que represente o tabuleiro e as regras do jogo.
+                - Implemente métodos para marcar uma posição no tabuleiro, verificar se há um vencedor e reiniciar o
+                jogo.
+            </p>
+            <div>
+                <h3>Jogo da Velha!</h3>
+                <p>Jogador Atual: <span id="jogador_02">X</span></p>
+                <div id="pontos_contar">
+                    <ul style="list-style: none;" id="tabuleiro_02">
+                        <li>
+                            <span onclick="jogo.pontuacao('0101')" id="0101">--</span>
+                            <span onclick="jogo.pontuacao('0102')" id="0102">--</span>
+                            <span onclick="jogo.pontuacao('0103')" id="0103">--</span>
+                        </li>
+                        <li>
+                            <span onclick="jogo.pontuacao('0201')" id="0201">--</span>
+                            <span onclick="jogo.pontuacao('0202')" id="0202">--</span>
+                            <span onclick="jogo.pontuacao('0203')" id="0203">--</span>
+                        </li>
+                        <li>
+                            <span onclick="jogo.pontuacao('0301')" id="0301">--</span>
+                            <span onclick="jogo.pontuacao('0302')" id="0302">--</span>
+                            <span onclick="jogo.pontuacao('0303')" id="0303">--</span>
+                        </li>
+                    </ul>
+                </div>
+                <button onclick="jogo.reset()">Reiniciar</button>
+                <p id="res_02"></p>
+            </div>
+        </div>
+        <div class="questao">
+            <p>
+                3. Gestão de Contatos:
+                - Crie uma classe `Contato` com propriedades como nome, telefone e email.
+                - Crie uma classe `Agenda` que possa adicionar, remover e pesquisar contatos.
+            </p>
+            <h3>Gestão de contatos:</h3>
+            <label for="03">Nome:</label>
+            <input type="text" id="03_01">
+            <label for="03">Telefone:</label>
+            <input type="number" id="03_02">
+            <label for="03">E-mail:</label>
+            <input type="text" id="03_03">
+            <button onclick="gestaodecontatos()">enviar</button>
+            <p id="res_03"></p>
+        </div>
+        <div class="questao">
+            <p>
+                4. Sistema Bancário:
+                - Crie uma classe `ContaBancaria` com propriedades como saldo e número da conta.
+                - Implemente métodos para depositar, sacar e verificar o saldo da conta.
+            </p>
+            <h3>Sistema Bancário:</h3>
+            <label for="numeroConta">Número da Conta:</label>
+            <input type="number" id="numeroConta"><br><br>
+
+            <label for="valor">Valor:</label>
+            <input type="number" id="valor"><br><br>
+
+            <button onclick="criarConta()">Criar Conta</button>
+            <button onclick="depositar()">Depositar</button>
+            <button onclick="sacar()">Sacar</button>
+            <button onclick="verificarSaldo()">Verificar Saldo</button>
+
+            <p id="res_04"></p>
+        </div>
+        <div class="questao">
+            <p>
+                5. Loja Online:
+                - Crie uma classe `Produto` com propriedades como nome, preço e quantidade em estoque.
+                - Crie uma classe `CarrinhoDeCompras` que possa adicionar produtos, calcular o total da compra e
+                finalizar a compra.
+            </p>
+            <h3>Adicionar Produto:</h3>
+            <label for="nomeProduto">Nome do Produto:</label>
+            <input type="text" id="nomeProduto"><br><br>
+
+            <label for="precoProduto">Preço:</label>
+            <input type="number" id="precoProduto"><br><br>
+
+            <label for="quantidadeEstoque">Quantidade em Estoque:</label>
+            <input type="number" id="quantidadeEstoque"><br><br>
+
+            <button onclick="criarProduto()">Criar Produto</button>
+
+            <h3>Adicionar ao Carrinho:</h3>
+            <label for="nomeProdutoCarrinho">Nome do Produto:</label>
+            <input type="text" id="nomeProdutoCarrinho"><br><br>
+
+            <label for="quantidadeCarrinho">Quantidade:</label>
+            <input type="number" id="quantidadeCarrinho"><br><br>
+
+            <button onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+
+            <h3>Finalizar Compra:</h3>
+            <button onclick="finalizarCompra()">Finalizar Compra</button>
+
+            <p id="res_05"></p>
+        </div>
+    </div>
+
+</body>
+<script src="atividade.js"></script>
+
+</html>
