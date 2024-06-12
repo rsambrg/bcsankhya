@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade - JS - Classes e Objetos</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #e0f7fa;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        #questoes {
+            background-color: #ffffff;
+            padding: 30px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .concluida {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1050;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.8);
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-content {
+            margin: 5% auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 350px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .grid-item img:hover {
+            transform: scale(1.05);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        th {
+            cursor: pointer;
+            background-color: #f0f0f0;
+        }
+
+        th.sort-asc::after {
+            content: " \25B2";
+        }
+
+        th.sort-desc::after {
+            content: " \25BC";
+        }
+
+        input[type="text"] {
+            margin-bottom: 10px;
+            padding: 5px;
+            width: 100%;
+        }
+
+        .produto,
+        .item-carrinho {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .carrinho {
+            margin-top: 20px;
+        }
+
+        input[type="number"] {
+            width: 50px;
+        }
+
+        .anterior,
+        .proxima {
+            background-color: #ff4081;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .anterior:hover,
+        .proxima:hover {
+            background-color: #e91e63;
+        }
+        .completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .form-field {
+            margin-bottom: 20px;
+        }
+        .field-container {
+            display: flex;
+            align-items: center;
+        }
+        .field-container select, .field-container input {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="text-center">
+        <h1 class="display-4">Atividade JS - Classes e Objetos</h1>
+    </header>
+    <div id="questoes" class="container">
+        <div class="row">
+            <div class="col-md-6 questao">
+                <h3>To-Do List Interativa</h3>
+                <div class="input-group mb-3">
+                    <input type="text" id="novaTarefa" class="form-control" placeholder="Adicionar nova tarefa">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" onclick="adicionarTarefa()">Adicionar</button>
+                    </div>
+                </div>
+                <ul id="listaDeTarefas" class="list-group"></ul>
+            </div>
+            <div class="col-md-6 questao">
+                <div class="container">
+                    <h1 class="mb-4">Gerador Dinâmico de Formulários</h1>
+                    <button class="btn btn-primary mb-3" onclick="adicionarCampo()">Adicionar Campo</button>
+                    <form id="formulario">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 questao">
+                <h3>Galeria de Imagens com Modal</h3>
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <img src="imagem1.png" alt="Imagem 1" onclick="abrirModal(this)">
+                    </div>
+                    <div class="grid-item">
+                        <img src="imagem2.png" alt="Imagem 2" onclick="abrirModal(this)">
+                    </div>
+                </div>
+                <div id="modal" class="modal" onclick="fecharModal()">
+                    <div class="modal-content">
+                        <img id="imagemModal" src="" alt="Imagem Modal" class="img-fluid">
+                        <div class="text-center mt-3">
+                            <button onclick="mostrarAnterior()" class="anterior">&lt; Anterior</button>
+                            <button onclick="mostrarProxima()" class="proxima">Próxima &gt;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 questao">
+                <h3>Tabela de Dados Filtrável e Ordenável</h3>
+                <input type="text" id="filterName" class="form-control" placeholder="Filtrar por nome"
+                    oninput="filterTable()">
+                <input type="text" id="filterAge" class="form-control mt-2" placeholder="Filtrar por idade"
+                    oninput="filterTable()">
+                <table id="dataTable" class="table table-striped mt-3">
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable(0)">Nome</th>
+                            <th onclick="sortTable(1)">Idade</th>
+                            <th onclick="sortTable(2)">Cidade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Maria</td>
+                            <td>30</td>
+                            <td>São Paulo</td>
+                        </tr>
+                        <tr>
+                            <td>João</td>
+                            <td>25</td>
+                            <td>Rio de Janeiro</td>
+                        </tr>
+                        <tr>
+                            <td>Ana</td>
+                            <td>22</td>
+                            <td>Belo Horizonte</td>
+                        </tr>
+                        <tr>
+                            <td>Pedro</td>
+                            <td>28</td>
+                            <td>Curitiba</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 questao">
+                <h3>Simulador de Carrinho de Compras</h3>
+                <div id="listaProdutos" class="mb-3">
+                    <div class="produto">
+                        <span>Produto 1</span>
+                        <span>R$ 10,00</span>
+                        <button class="btn btn-info"
+                            onclick="adicionarAoCarrinho('Produto 1', 10.00)">Adicionar</button>
+                    </div>
+                    <div class="produto">
+                        <span>Produto 2</span>
+                        <span>R$ 20,00</span>
+                        <button class="btn btn-info"
+                            onclick="adicionarAoCarrinho('Produto 2', 20.00)">Adicionar</button>
+                    </div>
+                    <div class="produto">
+                        <span>Produto 3</span>
+                        <span>R$ 30,00</span>
+                        <button class="btn btn-info"
+                            onclick="adicionarAoCarrinho('Produto 3', 30.00)">Adicionar</button>
+                    </div>
+                </div>
+
+                <div class="carrinho">
+                    <h4>Carrinho de Compras</h4>
+                    <div id="carrinhoItens">
+                    </div>
+                    <div>
+                        <strong>Total: R$ <span id="totalCarrinho">0.00</span></strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
