@@ -10,4 +10,9 @@
         <maven.compiler.target>22</maven.compiler.target>
         <exec.mainClass>org.java.atividade.Java_atividades</exec.mainClass>
     </properties>
+    <dependency>
+        <groupId>org.postgresql</groupId>
+        <artifactId>postgresql</artifactId>
+        <version>42.7.3</version> 
+    </dependency>
 </project>

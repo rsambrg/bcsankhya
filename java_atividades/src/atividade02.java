@@ -1,8 +1,4 @@
 
-//import java.util.Arrays;
-//import java.util.Scanner;
-//import java.util.HashSet;
-//import java.util.Set;
 
 
 public class atividade02 {
@@ -89,7 +85,7 @@ public class atividade02 {
         double desv = calc_desvio(arr,media);
         
         System.out.println("Media: "+media+" Desvio Padrao: "+desv);
-         
+        
         //4. Pesquisa em Matriz: Implemente um método para pesquisar um elemento em uma matriz multidimensional e 
         //retorne sua posição ou um indicativo de não encontrado.
 
@@ -105,14 +101,14 @@ public class atividade02 {
 
 
         do {
-            System.out.println("Digite um numero de 1 a 100 e boa sorte!");
+            System.out.println("Digite um numero de 1 a 20 e boa sorte!");
             int numero = teclado.nextInt();
 
             int[] sorte = {numero};
 
             for (int i = 0; i < 3; i++) {
                 for (int j = 0; j < 3; j++) {
-                    matriz[i][j] = rand.nextInt((100 - 0) + 1) + 0;
+                    matriz[i][j] = rand.nextInt((20 - 0) + 1) + 0;
                     if (matriz[i][j] == sorte[0]) {
                         z++;
 
@@ -145,7 +141,7 @@ public class atividade02 {
         System.out.println("Você fez: "+ pontos + " pontos!");
         System.out.println("Até logo!");
          
-
+        /*
         //5. Operações de Conjunto: Escreva funções que realizem operações de união, interseção e diferença entre dois arrays.
         System.out.println("Digite 5 nomes de animais");
         Scanner teclado = new Scanner(System.in);
@@ -218,7 +214,7 @@ public class atividade02 {
         Arrays.sort(lista);
         System.out.println(Arrays.toString(lista));
         
-
+        
        //JOGO DE ADIVINHAÇÃO
         System.out.println("Vamos fazer um jogo de adivinhação!");
         
@@ -368,7 +364,7 @@ public class atividade02 {
         for (Map.Entry<Integer, Integer> entrada : frequencia.entrySet()){
             System.out.println("Numero:"+ entrada.getKey() + " : " + entrada.getValue() + " vezes");
         }
-         
+         /*
         //9. Subconjuntos de Soma Zero: Determine se existe um subconjunto não vazio de elementos em um array cuja soma seja igual a zero.
         System.out.println("Determinando se existe um subcojunto 'nao vazio' de elementos em um array com soma = 0");
 

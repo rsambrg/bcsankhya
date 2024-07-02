@@ -1,13 +1,12 @@
- //import java.util.Set;
- //import java.util.HashSet;
- //import java.util.Arrays;
- //import java.util.Scanner;
+
+ import java.util.Arrays;
+ import java.util.Scanner;
 
 public class atividade03 {
 
     public static void main(String[] args) {
 
-        /*
+        
         //1. Soma dos Elementos Pares:
         //   Escreva um programa que calcule a soma dos elementos pares de uma lista de inteiros.
          
@@ -42,7 +41,7 @@ public class atividade03 {
 
         System.out.println("Números pares da lista: "+Arrays.toString(tot)+ " soma: "+ soma);
 
-         */
+         
  /*
         //2. Verificação de Palíndromo:
         //   Crie um método que verifique se uma lista de caracteres forma um palíndromo. 
